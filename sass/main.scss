@@ -1,0 +1,35 @@
+// main.scss
+//
+
+* {
+  &,
+  &:before,
+  &:after {
+    box-sizing: border-box;
+  }
+}
+html {
+  box-sizing: inherit;
+}
+body {
+  color: #333;
+  font-size: 16px;
+  line-height: 22px; // 1.4
+  // -webkit-font-smoothing: antialiased;
+}
+
+// PAGE
+//
+
+
+// Utility
+//
+
+.clearfix {
+
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}

@@ -1,0 +1,7 @@
+node_modules/
+public/bower_components/
+public/css/
+sass/*.css*
+.grunt/
+.sass-cache/
+.DS_Store

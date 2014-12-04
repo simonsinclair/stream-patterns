@@ -1,0 +1,8 @@
+{
+  "camelcase": true,
+  "unused": true,
+  "strict": true,
+
+  "browser": true,
+  "jquery": true
+}
