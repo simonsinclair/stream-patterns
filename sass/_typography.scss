@@ -1,0 +1,286 @@
+$base-font-size: 19px;
+$base-line-height: 27px;
+$measure: 760px;
+
+$h1-font-size: 80px;
+$h1-line: 27px;
+$h1-lines: 3;
+$h1-line-height: $h1-line * $h1-lines;
+$h1-margin-top: 2 * $h1-line;
+$h1-margin-bottom: 1 * $h1-line;
+
+$h2-font-size: 50px;
+$h2-line: 27px;
+$h2-lines: 2;
+$h2-line-height: $h2-line * $h2-lines;
+$h2-margin-top: 2 * $h2-line;
+$h2-margin-bottom: 1 * $h2-line;
+
+$h3-font-size: 31px;
+$h3-line: 27px;
+$h3-lines: 2;
+$h3-line-height: $h3-line * $h3-lines;
+$h3-margin-top: 1 * $h3-line;
+$h3-margin-bottom: 1 * $h3-line;
+
+$h4-font-size: 19px;
+$h4-line: 27px;
+$h4-lines: 1;
+$h4-line-height: $h4-line * $h4-lines;
+$h4-margin-top: 1 * $h4-line;
+$h4-margin-bottom: 1 * $h4-line;
+
+// Variables are rounded to pixels
+// It's safe to multiply with integers
+// eg. h1 {margin: 2*$h1-line 0;}
+// The grid will stay aligned
+
+// GEL
+%double-trafalgar {
+    // @include respond-to(A) {
+    //     @include font-settings(30px, 24px);
+    // }
+
+    // @include respond-to(B) {
+    //     @include font-settings(32px, 36px);
+    // }
+
+    // @include respond-to(C) {
+    //     @include font-settings(48px, 52px);
+    // }
+
+    // @include respond-to(D) {
+    //     @include font-settings(
+    //         48px,
+    //         get-script-value((latin 52px, bengali 58px))
+    //     );
+    // }
+    font-size: 32px;
+    line-height: 36px;
+}
+
+%trafalgar {
+    // @include respond-to(A) {
+    //     @include font-settings(
+    //         get-script-value((latin 20px, tamil 22px, arabic-pashto 22px, bengali 22px)),
+    //         get-script-value((latin 24px, arabic 28px, hindi 30px, tamil 30px, arabic-pashto 28px, bengali 30px, burmese 30px))
+    //     );
+    // }
+
+    // @include respond-to(B) {
+    //     @include font-settings(
+    //         get-script-value((latin 24px, arabic 24px, arabic-pashto 22px, bengali 26px)),
+    //         get-script-value((latin 28px, arabic 28px, tamil 31px, hindi 36px, arabic-pashto 34px, bengali 36px, burmese 36px))
+    //     );
+    // }
+
+    // @include respond-to(C) {
+    //     @include font-settings(
+    //         get-script-value((latin 36px, arabic 32px, hindi 34px, tamil 34px, arabic-pashto 32px, bengali 38px)),
+    //         get-script-value((latin 40px, arabic 40px, latin-diacritics 42px, hindi 50px, tamil 42px, arabic-pashto 44px, bengali 50px, burmese 52px))
+    //     );
+    // }
+
+    // @include respond-to(D) {
+    //     @include font-settings(
+    //         32px,
+    //         get-script-value((latin 34px, arabic 38px, hindi 44px, arabic-pashto 38px, bengali 38px, burmese 48px, chinese 42px, tamil 38px))
+    //     );
+    // }
+
+    font-size: 24px;
+    line-height: 28px;
+}
+
+%double-pica {
+    // @include respond-to(A) {
+    //     @include font-settings(
+    //         get-script-value((latin 20px, tamil 22px, arabic 24px)),
+    //         get-script-value((latin 24px, tamil 30px, arabic 32px, hindi 30px, arabic-pashto 26px, bengali 30px, burmese 30px))
+    //     );
+    // }
+
+    // @include respond-to(B) {
+    //     @include font-settings(
+    //         get-script-value((latin 20px, arabic 24px, arabic-pashto 22px, chinese 22px)),
+    //         get-script-value((latin 24px, tamil 26px, arabic 28px, hindi 30px, arabic-pashto 32px, bengali 30px, burmese 30px))
+    //     );
+    // }
+
+    // @include respond-to(C) {
+    //     @include font-settings(
+    //         get-script-value((latin 28px, arabic 28px, arabic-pashto 24px, bengali 30px)),
+    //         get-script-value((latin 32px, arabic 30px, tamil 36px, latin-diacritics 34px, hindi 40px, arabic-pashto 34px, bengali 40px, burmese 40px))
+    //     );
+    // }
+
+    // @include respond-to(D) {
+    //     @include font-settings(
+    //         get-script-value((latin 24px, bengali 26px)),
+    //         get-script-value((latin 24px, arabic 28px, hindi 32px, arabic-pashto 28px, bengali 36px, burmese 36px, chinese 36px, tamil 26px))
+    //     );
+    // }
+
+    font-size: 20px;
+    line-height: 24px;
+}
+
+%great-primer {
+    // @include respond-to(A) {
+    //     @include font-settings(
+    //         get-script-value((latin 18px, tamil 20px, arabic-pashto 20px, bengali 20px)),
+    //         get-script-value((latin 20px, arabic 26px, latin-diacritics 22px, cyrillic 22px, hindi 26px, chinese 22px, tamil 28px, arabic-pashto 26px, bengali 26px, burmese 28px))
+    //     );
+    // }
+
+    // @include respond-to(B) {
+    //     @include font-settings(
+    //         get-script-value((latin 20px, arabic 20px, cyrillic 18px, hindi 18px, arabic-pashto 18px)),
+    //         get-script-value((latin 24px, arabic 24px, cyrillic 22px, hindi 26px, tamil 26px, arabic-pashto 28px, bengali 26px, burmese 30px))
+    //     );
+    // }
+
+    // @include respond-to(C) {
+    //     @include font-settings(
+    //         get-script-value((latin 24px, arabic 22px, hindi 22px, arabic-pashto 20px, bengali 26px)),
+    //         get-script-value((latin 28px, arabic 26px, tamil 32px, latin-diacritics 30px, hindi 32px, arabic-pashto 28px, bengali 32px, burmese 34px))
+    //     );
+    // }
+
+    // @include respond-to(D) {
+    //     @include font-settings(
+    //         get-script-value((latin 20px, bengali 22px)),
+    //         get-script-value((latin 24px, arabic 26px, hindi 28px, arabic-pashto 24px, bengali 26px, burmese 30px, chinese 30px, tamil 26px))
+    //     );
+    // }
+
+    font-size: 20px;
+    line-height: 24px;
+}
+
+%pica {
+    // @include respond-to(A) {
+    //     @include font-settings(
+    //         get-script-value((latin 15px, arabic 16px, chinese 16px, tamil 16px, arabic-pashto 16px, bengali 17px)),
+    //         get-script-value((latin 20px, arabic 26px, hindi 22px, chinese 22px, tamil 24px, arabic-pashto 26px, bengali 23px))
+    //     );
+    // }
+
+    // @include respond-to(B) {
+    //     @include font-settings(
+    //         get-script-value((latin 16px, arabic 18px, arabic-pashto 18px, bengali 17px)),
+    //         get-script-value((latin 22px, arabic 24px, tamil 24px, hindi 24px, chinese 25px, arabic-pashto 28px, bengali 23px, burmese 26px))
+    //     );
+    // }
+
+    // @include respond-to(C) {
+    //     @include font-settings(
+    //         get-script-value((latin 18px, arabic 20px, arabic-pashto 20px, bengali 20px)),
+    //         get-script-value((latin 24px, arabic 26px, tamil 26px, hindi 26px, chinese 26px, arabic-pashto 32px, bengali 26px, burmese 28px))
+    //     );
+    // }
+
+    // @include respond-to(D) {
+    //     @include font-settings(
+    //         get-script-value((latin 16px, arabic 18px, hindi 18px, arabic-pashto 18px, bengali 18px, burmese 18px, tamil 18px)),
+    //         get-script-value((latin 22px, hindi 26px, arabic-pashto 24px, bengali 24px, burmese 28px, chinese 24px))
+    //     );
+    // }
+
+    font-size: 16px;
+    line-height: 22px;
+}
+
+%long-primer {
+    // @include respond-to(A) {
+    //     @include font-settings(
+    //         get-script-value((latin 15px, arabic 17px, chinese 16px, tamil 16px, arabic-pashto 16px, bengali 18px)),
+    //         get-script-value((latin 18px, arabic 24px, latin-diacritics 20px, cyrillic 20px, hindi 21px, chinese 21px, tamil 22px, arabic-pashto 26px, bengali 23px, burmese 24px))
+    //     );
+    // }
+
+    // @include respond-to(B) {
+    //     @include font-settings(
+    //         get-script-value((latin 15px, arabic 16px, chinese 16px, arabic-pashto 16px, bengali 18px)),
+    //         get-script-value((latin 18px, arabic 22px, tamil 21px, latin-diacritics 20px, cyrillic 20px, hindi 21px, chinese 21px, arabic-pashto 24px, bengali 23px, burmese 24px))
+    //     );
+    // }
+
+    // @include respond-to(C) {
+    //     @include font-settings(
+    //         get-script-value((latin 16px, arabic 18px, arabic-pashto 18px, bengali 20px)),
+    //         get-script-value((latin 22px, arabic 24px, tamil 24px, hindi 24px, chinese 24px, arabic-pashto 28px, bengali 26px, burmese 26px))
+    //     );
+    // }
+
+    // @include respond-to(D) {
+    //     @include font-settings(
+    //         get-script-value((latin 14px, arabic 16px, hindi 16px, bengali 16px, burmese 16px, tamil 16px)),
+    //         get-script-value((latin 18px, arabic 21px, hindi 22px, arabic-pashto 16px, bengali 22px, burmese 24px, chinese 21px, tamil 21px))
+    //     );
+    // }
+
+    font-size: 15px;
+    line-height: 18px;
+}
+
+%brevier {
+    // @include respond-to(A) {
+    //     @include font-settings(
+    //         get-script-value((latin 14px, arabic 16px, arabic-pashto 16px)),
+    //         get-script-value((latin 16px, tamil 20px, arabic 18px, latin-diacritics 18px, hindi 20px, arabic-pashto 22px, bengali 20px, burmese 22px))
+    //     );
+    // }
+
+    // @include respond-to(B) {
+    //     @include font-settings(
+    //         get-script-value((latin 14px, arabic 16px, arabic-pashto 16px)),
+    //         get-script-value((latin 16px, tamil 20px, arabic 20px, latin-diacritics 18px, hindi 20px, arabic-pashto 22px, bengali 20px, burmese 22px))
+    //     );
+    // }
+
+    // @include respond-to(C) {
+    //     @include font-settings(
+    //         get-script-value((latin 14px, arabic 16px, arabic-pashto 16px)),
+    //         get-script-value((latin 16px, arabic 20px, tamil 20px, latin-diacritics 18px, hindi 20px, arabic-pashto 22px, bengali 20px, burmese 22px))
+    //     );
+    // }
+
+    // @include respond-to(D) {
+    //     @include font-settings(
+    //         get-script-value((latin 13px, arabic 15px, hindi 14px, arabic-pashto 14px, bengali 15px, burmese 14px, chinese 12px, tamil 14px)),
+    //         get-script-value((latin 16px, arabic 19px, hindi 18px, bengali 18px, burmese 22px, tamil 18px))
+    //     );
+    // }
+
+    font-size: 14px;
+    line-height: 16px;
+}
+
+%minion {
+    // @if $core {
+    //     text-transform: uppercase;
+    // }
+
+    // @include respond-to(A) {
+    //     @include font-settings(12px, 16px);
+    // }
+
+    // @include respond-to(B) {
+    //     @include font-settings(12px, 16px);
+    // }
+
+    // @include respond-to(C) {
+    //     @include font-settings(13px, 16px);
+    // }
+
+    // @include respond-to(D) {
+    //     @include font-settings(
+    //         get-script-value((latin 12px, arabic 15px, hindi 14px, arabic-pashto 14px, bengali 15px, burmese 14px, tamil 14px)),
+    //         get-script-value((latin 16px, arabic 19px, hindi 18px, bengali 18px, burmese 22px, tamil 18px))
+    //     );
+    // }
+
+    font-size: 12px;
+    line-height: 16px;
+}

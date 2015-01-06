@@ -1,0 +1,84 @@
+// _components.scss
+//
+
+.markup {
+  color: #333;
+  font-family: Arial, sans-serif;
+}
+button {
+  border: none;
+  padding: 0;
+}
+
+// TOP STORIES
+//////////////|
+
+.top-stories {
+
+  .title {
+    @extend %pica;
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+    .title__stitch {
+      background-color: #CC0101;
+      height: 2px;
+      margin-bottom: 2px;
+      width: 36px;
+    }
+
+}
+
+// STREAM
+/////////|
+
+.stream {
+
+  .header {
+
+    .header-wrap {
+      @extend .clearfix;
+      background: #EEE;
+      padding: 8px;
+
+      h2 {
+        @extend %pica;
+        float: left;
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+        .latest {
+          @extend %minion;
+          background-color: #CC0101;
+          color: #FFF;
+          padding: 2px 4px;
+          text-transform: uppercase;
+        }
+      button {
+        float: right;
+      }
+    }
+  }
+
+  .timestamp {
+
+    time {
+      @extend %long-primer;
+      color: #606060;
+    }
+  }
+
+  .show-more {
+
+    button {
+      @extend %pica;
+      color: #FFF;
+      border-bottom: 2px solid #315E2C;
+      background-color: #499243;
+      font-weight: bold;
+      padding: 10px;
+      width: 100%;
+    }
+  }
+}
