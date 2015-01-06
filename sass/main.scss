@@ -14,7 +14,7 @@ html {
   box-sizing: inherit;
 }
 body {
-  color: #999;
+  color: #888;
   font-size: $base-font-size;
   line-height: $base-line-height; // 1.4
   // -webkit-font-smoothing: antialiased;
@@ -41,7 +41,7 @@ h3 {
 // PAGE
 //
 .page {
-  margin-left: 72px;
+  margin: 0 72px;
   padding-bottom: 128px;
 }
 .component {}
