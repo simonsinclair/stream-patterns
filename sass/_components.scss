@@ -40,23 +40,35 @@ button {
     .header-wrap {
       @extend .clearfix;
       background: #EEE;
-      padding: 8px;
+      height: 48px;
+      padding: 0 16px;
+      // padding: 8px;
 
       h2 {
         @extend %pica;
         float: left;
-        margin-top: 0;
+        font-weight: normal;
+        margin-top: 14px;
         margin-bottom: 0;
       }
         .latest {
           @extend %minion;
           background-color: #CC0101;
           color: #FFF;
+          margin-right: 4px;
           padding: 2px 4px;
           text-transform: uppercase;
         }
       button {
+        @extend %pica;
         float: right;
+        height: 24px;
+        margin-top: 12px;
+        width: 24px;
+
+        span {
+          display: none;
+        }
       }
     }
   }
