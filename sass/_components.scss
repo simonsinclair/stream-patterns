@@ -1,13 +1,16 @@
 // _components.scss
 //
 
+
 .markup {
   color: #333;
   font-family: Arial, sans-serif;
-}
-button {
-  border: none;
-  padding: 0;
+
+  h1,
+  h2,
+  h3 {
+    letter-spacing: 0;
+  }
 }
 
 // TOP STORIES
@@ -16,16 +19,19 @@ button {
 .top-stories {
 
   .title {
-    @extend %pica;
-    margin-top: 0;
-    margin-bottom: 0;
-  }
-    .title__stitch {
-      background-color: #CC0101;
-      height: 2px;
-      margin-bottom: 2px;
-      width: 36px;
+
+    .heading {
+      @extend %pica;
+      margin-top: 0;
+      margin-bottom: 0;
     }
+      .heading__stitch {
+        background-color: #CC0101;
+        height: 2px;
+        margin-bottom: 2px;
+        width: 36px;
+      }
+  }
 
 }
 
