@@ -287,11 +287,13 @@ sub {
     line-height: 18px;
 
     @include respond-to(tablet) {
-
+      font-size: 16px;
+      line-height: 22px;
     }
 
     @include respond-to(wide) {
-
+      font-size: 14px;
+      line-height: 18px;
     }
 }
 
