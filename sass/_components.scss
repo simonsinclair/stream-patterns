@@ -44,9 +44,9 @@
 
     .header-wrap {
       background: #EEE;
-      height: 48px;
+      // height: 48px;
       overflow: hidden;
-      padding: 12px 8px 0;
+      padding: 12px 8px;
       position: relative;
 
       h2 {
@@ -71,15 +71,19 @@
       button {
         @extend %pica;
         background-color: #DDD;
-        padding: 4px 8px 8px;
+        padding: 4px 8px;
         position: absolute;
           top: 9px; right: 8px;
-        height: 30px;
+        // height: 30px;
 
         span {
           display: none;
           margin-right: 2px;
           vertical-align: middle;
+
+          @include respond-to(tablet) {
+            display: inline;
+          }
         }
         img {
           height: 20px;

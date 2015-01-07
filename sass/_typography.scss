@@ -78,6 +78,14 @@ sub {
     // }
     font-size: 32px;
     line-height: 36px;
+
+    @include respond-to(tablet) {
+
+    }
+
+    @include respond-to(wide) {
+
+    }
 }
 
 %trafalgar {
@@ -111,6 +119,14 @@ sub {
 
     font-size: 24px;
     line-height: 28px;
+
+    @include respond-to(tablet) {
+
+    }
+
+    @include respond-to(wide) {
+
+    }
 }
 
 %double-pica {
@@ -144,6 +160,14 @@ sub {
 
     font-size: 20px;
     line-height: 24px;
+
+    @include respond-to(tablet) {
+
+    }
+
+    @include respond-to(wide) {
+
+    }
 }
 
 %great-primer {
@@ -177,6 +201,14 @@ sub {
 
     font-size: 20px;
     line-height: 24px;
+
+    @include respond-to(tablet) {
+
+    }
+
+    @include respond-to(wide) {
+
+    }
 }
 
 %pica {
@@ -210,6 +242,16 @@ sub {
 
     font-size: 16px;
     line-height: 22px;
+
+    @include respond-to(tablet) {
+      font-size: 18px;
+      line-height: 24px;
+    }
+
+    @include respond-to(wide) {
+      font-size: 16px;
+      line-height: 22px;
+    }
 }
 
 %long-primer {
@@ -243,6 +285,14 @@ sub {
 
     font-size: 15px;
     line-height: 18px;
+
+    @include respond-to(tablet) {
+
+    }
+
+    @include respond-to(wide) {
+
+    }
 }
 
 %brevier {
@@ -276,6 +326,14 @@ sub {
 
     font-size: 14px;
     line-height: 16px;
+
+    @include respond-to(tablet) {
+
+    }
+
+    @include respond-to(wide) {
+
+    }
 }
 
 %minion {
@@ -304,4 +362,12 @@ sub {
 
     font-size: 12px;
     line-height: 16px;
+
+    @include respond-to(tablet) {
+
+    }
+
+    @include respond-to(wide) {
+
+    }
 }
