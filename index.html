@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-    <title>Stream Patterns</title>
+    <title>Local Pattern Library</title>
     <meta name="description" content="" />
 
     <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -14,17 +14,19 @@
   </head>
   <body>
     <div class="page">
-      <h1>Local Patterns</h1>
+      <h1>Local Pattern Library</h1>
 
+      <!-- TOP STORIES COMPONENT -->
       <div class="component top-stories">
         <h2>Top Stories</h2>
 
-        <div class="element">
+        <!-- TITLE -->
+        <div class="element title">
           <h3>Title</h3>
 
           <div class="markup">
-            <h2 class="title">
-              <div class="title__stitch"></div>
+            <h2 class="heading">
+              <div class="heading__stitch"></div>
                Top Stories
             </h2>
           </div>
@@ -32,9 +34,11 @@
         </div>
       </div>
 
+      <!-- STREAM COMPONENT -->
       <div class="component stream">
         <h2>Stream</h2>
 
+        <!-- HEADER -->
         <div class="element header">
           <h3>Header</h3>
 
@@ -52,6 +56,8 @@
 
           </div>
         </div>
+
+        <!-- TIMESTAMP -->
         <div class="element timestamp">
           <h3>Timestamp</h3>
 
@@ -68,12 +74,23 @@
             <time>06 Dec 14</time>
           </div>
         </div>
+
+        <!-- SHOW MORE -->
         <div class="element show-more">
           <h3>&lsquo;Show More&rsquo;</h3>
 
           <div class="markup">
             <button>Show More</button>
           </div>
+        </div>
+      </div>
+
+      <!-- ERROR -->
+      <div class="element error">
+        <h3>Error</h3>
+
+        <div class="markup">
+          <p>&hellip;</p>
         </div>
       </div>
     </div>
