@@ -9,7 +9,7 @@
     includes: [
       {
         name: "posts",
-        path: "/includes/posts.html",
+        path: "includes/posts.html",
         destination: "#js-panel-posts"
       }
     ],
