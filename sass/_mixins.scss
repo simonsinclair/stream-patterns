@@ -1,21 +1,21 @@
 // _mixins.scss
 
-$breakpoints: (
-  compact: "(max-width: 599px)",
-  tablet: "(min-width: 600px)",
-  wide: "(min-width: 1008px)"
+$groups: (
+  B: "(max-width: 599px)",
+  C: "(min-width: 600px)",
+  D: "(min-width: 1008px)"
 );
 
-@mixin respond-to($breakpoint) {
-  $media-query: map-get($breakpoints, $breakpoint);
+@mixin respond-to($group) {
+  $breakpoint: map-get($groups, $group);
 
-  @if $media-query == null {
+  @if $breakpoint == null {
 
-    @warn "Breakpoint not found."
+    @warn "Group not found."
 
   } @else {
 
-    @media #{map-get($breakpoints, $breakpoint)} {
+    @media #{$breakpoint} {
       @content;
     }
 

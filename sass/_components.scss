@@ -80,7 +80,7 @@
           margin-right: 2px;
           vertical-align: middle;
 
-          @include respond-to(tablet) {
+          @include respond-to(C) {
             display: inline;
           }
         }
