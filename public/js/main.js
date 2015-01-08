@@ -6,17 +6,23 @@
 
 	var App = {
 
-    postLoaded: {
-
-    },
+    includes: [
+      {
+        name: "posts",
+        path: "/includes/posts.html",
+        destination: "#js-panel-posts"
+      }
+    ],
 
     init: function() {
-      App.loadContent();
+      App.loadIncludes();
       App.bindEvts();
     },
 
-    loadContent: function() {
-      // Load content in to hidden tab panels.
+    loadIncludes: function() {
+      $.each(App.includes, function(i, include) {
+        $(include.destination).load(include.path);
+      });
     },
 
     bindEvts: function() {
@@ -36,7 +42,7 @@
 
     activateTabPanel: function(panelName) {
       $('.panel').hide();
-      $('.panel.panel--' + panelName).show();
+      $('#js-panel-' + panelName).show();
     }
   };
 
