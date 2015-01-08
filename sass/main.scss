@@ -132,6 +132,13 @@ button {
       }
     }
 
+// Panels
+.panel {}
+  .panel--furniture {}
+  .panel--posts {
+    display: none;
+  }
+
 // Element
 .element {}
 
