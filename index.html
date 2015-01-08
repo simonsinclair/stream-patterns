@@ -26,7 +26,9 @@
 
       <!-- TOP STORIES: COMPONENT -->
       <div class="component top-stories">
-        <h2>Top Stories</h2>
+        <div class="component__menu">
+          <h2>Top Stories</h2>
+        </div>
 
         <!-- TITLE -->
         <div class="element title">
@@ -44,70 +46,84 @@
 
       <!-- STREAM: COMPONENT -->
       <div class="component stream">
-        <h2>Stream</h2>
+        <div class="component__menu">
+          <h2>Stream</h2>
+          <ul class="component__tabs" id="js-component-tabs">
+            <li class="active"><a href="#" data-panel-name="furniture">Furniture</a></li>
+            <li><a href="#" data-panel-name="posts">Posts</a></li>
+          </ul>
+        </div>
 
-        <!-- HEADER -->
-        <div class="element header">
-          <h3>Header</h3>
+        <div class="panel panel--furniture">
 
-          <div class="markup">
+          <!-- HEADER -->
+          <div class="element header">
+            <h3>Header</h3>
 
-            <div class="header-wrap">
-              <h2>
-                <span class="latest">Latest</span>
-                <span class="location">Birmingham and Black Country</span>
-              </h2>
-              <button>
-                <span>Refresh</span> <img src="img/header/refresh.svg" alt="" />
-              </button>
+            <div class="markup">
+
+              <div class="header-wrap">
+                <h2>
+                  <span class="latest">Latest</span>
+                  <span class="location">Birmingham and Black Country</span>
+                </h2>
+                <button>
+                  <span>Refresh</span> <img src="img/header/refresh.svg" alt="" />
+                </button>
+              </div>
+
             </div>
-
           </div>
-        </div>
 
-        <!-- REFRESH ERROR -->
-        <div class="element refresh-error">
-          <h3>Refresh error</h3>
+          <!-- REFRESH ERROR -->
+          <div class="element refresh-error">
+            <h3>Refresh error</h3>
 
-          <div class="markup">
-            <p>Sorry, we can't refresh the page. Please try again.</p>
+            <div class="markup">
+              <p>Sorry, we can't refresh the page. Please try again.</p>
+            </div>
           </div>
-        </div>
 
-        <!-- TIMESTAMP -->
-        <div class="element timestamp">
-          <h3>Timestamp</h3>
+          <!-- TIMESTAMP -->
+          <div class="element timestamp">
+            <h3>Timestamp</h3>
 
-          <div class="markup">
-            <time>1 min ago</time>
+            <div class="markup">
+              <time>1 min ago</time>
+            </div>
+            <div class="markup">
+              <time>3 hours ago</time>
+            </div>
+            <div class="markup">
+              <time>5 days ago</time>
+            </div>
+            <div class="markup">
+              <time>06 Dec 14</time>
+            </div>
           </div>
-          <div class="markup">
-            <time>3 hours ago</time>
-          </div>
-          <div class="markup">
-            <time>5 days ago</time>
-          </div>
-          <div class="markup">
-            <time>06 Dec 14</time>
-          </div>
-        </div>
 
-        <!-- SHOW MORE -->
-        <div class="element show-more">
-          <h3>&lsquo;Show More&rsquo;</h3>
+          <!-- SHOW MORE -->
+          <div class="element show-more">
+            <h3>&lsquo;Show More&rsquo;</h3>
 
-          <div class="markup">
-            <button>Show more</button>
+            <div class="markup">
+              <button>Show more</button>
+            </div>
           </div>
-        </div>
 
-        <!-- SHOW MORE ERROR -->
-        <div class="element show-more-error">
-          <h3>&lsquo;Show More&rsquo; error</h3>
+          <!-- SHOW MORE ERROR -->
+          <div class="element show-more-error">
+            <h3>&lsquo;Show More&rsquo; error</h3>
 
-          <div class="markup">
-            <p>Sorry, we can't show more at the moment. Please try again later.</p>
+            <div class="markup">
+              <p>Sorry, we can't show more at the moment. Please try again later.</p>
+            </div>
           </div>
+
+        </div><!-- /.panel.panel--furniture -->
+
+        <div class="panel panel--posts">
+          <p>Posts</p>
         </div>
 
       </div><!-- /.stream -->
