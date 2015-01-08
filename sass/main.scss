@@ -45,6 +45,7 @@ h3 {
   margin-bottom: $h3-margin-bottom;
 }
 a {
+  color: inherit;
   text-decoration: none;
 }
 button {
@@ -92,7 +93,11 @@ button {
 
 .page {
   margin: 0 72px;
-  padding-bottom: 128px;
+  padding-bottom: $base-line-height * 4;
+}
+.footer {
+  margin-top: $base-line-height * 4;
+  text-align: center;
 }
 
 // Component
