@@ -75,6 +75,10 @@
         position: absolute;
           top: 9px; right: 8px;
 
+        &:hover {
+          background-color: #d5d5d5;
+        }
+
         span {
           display: none;
           margin-right: 2px;
@@ -111,6 +115,23 @@
       font-weight: bold;
       padding: 10px;
       width: 100%;
+
+      &:hover {
+        background-color: #4F9E48;
+      }
+      &:active {
+        margin-top: 1px;
+        border-bottom-width: 1px;
+      }
     }
   }
-}
+
+  .refresh-error,
+  .show-more-error {
+
+    p {
+      color: #999;
+    }
+  }
+
+} // .stream
