@@ -92,8 +92,11 @@ button {
   }
 
 .page {
-  margin: 0 72px;
   padding-bottom: $base-line-height * 4;
+
+  @include respond-to(C) {
+    margin: 0 64px;
+  }
 }
 .footer {
   margin-top: $base-line-height * 4;
@@ -151,7 +154,11 @@ button {
 .markup {
   background-image: url('../img/checker.gif');
   border-radius: 5px;
-  padding: 6px;
+  padding: 6px 0;
+
+  @include respond-to(C) {
+    padding: 6px;
+  }
 }
 
 @import 'components';
