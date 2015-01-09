@@ -41,6 +41,10 @@
 
 .stream {
 
+
+  // FURNITURE
+  ////////////|
+
   .header {
 
     .header-wrap {
@@ -137,5 +141,64 @@
       color: #999;
     }
   }
+
+
+  // POSTS
+  /////////|
+
+  .headline {}
+
+  .body-copy {}
+
+  .inline-link {
+
+    p > a {
+      font-weight: bold;
+    }
+  }
+
+  .unordered-list {}
+
+  // Contributor
+  // - Uses display: table-cell for vertical alignment
+  .contributor {}
+    .contributor__avatar,
+    .contributor__body {
+      display: table-cell;
+      vertical-align: middle;
+    }
+
+    .contributor__avatar {
+      padding-right: 12px;
+
+      > img {
+        display: block;
+        max-width: none;
+      }
+    }
+    .contributor__body {
+      width: 100%;
+    }
+
+  .quote {
+
+    blockquote {
+
+      &::before {
+        // GEL Icon
+      }
+    }
+  }
+
+  .email {
+
+  }
+
+  .tweet {}
+
+  .sms {}
+
+  .media {}
+
 
 } // .stream
