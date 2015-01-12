@@ -27,6 +27,10 @@
 
     bindEvts: function() {
       $('#js-component-tabs').on('click', 'a', App.handleTabClick);
+      $('#js-footer-top').on('click', function(e) {
+        e.preventDefault();
+        $('html,body').scrollTop(0);
+      });
     },
 
     handleTabClick: function(e) {
