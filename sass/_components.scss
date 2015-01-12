@@ -194,11 +194,20 @@
 
   }
 
-  .tweet {}
+  .tweet {
 
-  .sms {}
+  }
 
-  .media {}
+  .sms {
+
+  }
+
+  .media {
+
+    img {
+      display: block;
+    }
+  }
 
 
 } // .stream

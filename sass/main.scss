@@ -99,9 +99,19 @@ button {
   }
 }
 .footer {
+  // @extend %clearfix;
   margin-top: $base-line-height * 4;
+  position: relative;
   text-align: center;
 }
+  .footer__top {
+    border: 1px solid;
+    display: block;
+    // float: right;
+    padding: $base-line-height / 4;
+    position: absolute;
+      top: 0; right: 0;
+  }
 
 // Component
 .component {}
