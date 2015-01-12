@@ -26,6 +26,8 @@
       margin-top: 0;
       margin-bottom: 0;
     }
+
+      // Red line, or 'branch'.
       .heading__stitch {
         background-color: #CC0101;
         height: 2px;
@@ -34,7 +36,7 @@
       }
   }
 
-}
+} // End of .top-stories component.
 
 // STREAM
 /////////|
@@ -42,8 +44,8 @@
 .stream {
 
 
-  // FURNITURE
-  ////////////|
+  // Furniture
+  // ---------
 
   .header {
 
@@ -53,6 +55,7 @@
       padding: 12px 8px;
       position: relative;
 
+      // Heading group.
       h2 {
         @extend %pica;
         font-weight: normal;
@@ -63,6 +66,8 @@
         text-overflow: ellipsis;
         white-space: nowrap;
       }
+
+        // Latest label.
         .latest {
           @extend %minion;
           background-color: #CC0101;
@@ -72,9 +77,13 @@
           text-transform: uppercase;
           vertical-align: middle;
         }
+
+        // Current locale.
         .location {
           vertical-align: middle;
         }
+
+      // Refresh button group.
       button {
         @extend %pica;
         background-color: #DDD;
@@ -86,6 +95,7 @@
           background-color: #d5d5d5;
         }
 
+        // 'Refresh' text.
         span {
           display: none;
           margin-right: 2px;
@@ -95,6 +105,8 @@
             display: inline;
           }
         }
+
+        // Refresh icon.
         img {
           height: 20px;
           width: 20px;
@@ -143,8 +155,8 @@
   }
 
 
-  // POSTS
-  /////////|
+  // Posts
+  // -----
 
   .headline {}
 
@@ -159,8 +171,6 @@
 
   .unordered-list {}
 
-  // Contributor
-  // - Uses display: table-cell for vertical alignment
   .contributor {}
     .contributor__avatar,
     .contributor__body {
@@ -185,7 +195,7 @@
     blockquote {
 
       &::before {
-        // GEL Icon
+        // GEL Quote Icon
       }
     }
   }
@@ -210,4 +220,4 @@
   }
 
 
-} // .stream
+} // End of .stream component.
