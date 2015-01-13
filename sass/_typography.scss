@@ -373,3 +373,125 @@ sub {
 
     }
 }
+
+// New Front Page font classes
+//////////////////////////////|
+
+%canon {
+    // @include respond-to(A) {
+    //     @include font-settings(20px, 24px);
+    //     letter-spacing: -.5px;
+    // }
+
+    // @include respond-to(B) {
+    //     @include font-settings(24px, 28px);
+    //     letter-spacing: -1px;
+    // }
+
+    // @include respond-to(C) {
+    //     @include font-settings(32px, 36px);
+    //     letter-spacing: -1px;
+    // }
+
+    // @include respond-to(D) {
+    //     @include font-settings(32px, 36px);
+    //     letter-spacing: -1px;
+    // }
+}
+
+
+%emerald {
+    // @include respond-to(A) {
+    //     @include font-settings(18px, 20px);
+    // }
+
+    // @include respond-to(B) {
+    //     @include font-settings(18px, 20px);
+    // }
+
+    // @include respond-to(C) {
+    //     @include font-settings(20px, 24px);
+    //     letter-spacing: -.5px;
+    // }
+
+    // @include respond-to(D) {
+    //     @include font-settings(20px, 24px);
+    //     letter-spacing: -.5px;
+    // }
+}
+
+%paragon {
+    // @include respond-to(A) {
+    //     @include font-settings(18px, 20px);
+    // }
+
+    // @include respond-to(B) {
+    //     @include font-settings(18px, 20px);
+    // }
+
+    // @include respond-to(C) {
+    //     @include font-settings(18px, 20px);
+    // }
+
+    // @include respond-to(D) {
+    //     @include font-settings(18px, 20px);
+    // }
+}
+
+%english {
+    // @include respond-to(A) {
+    //     @include font-settings(18px, 20px);
+    // }
+
+    // @include respond-to(B) {
+    //     @include font-settings(18px, 20px);
+    // }
+
+    // @include respond-to(C) {
+    //     @include font-settings(16px, 20px);
+    // }
+
+    // @include respond-to(D) {
+    //     @include font-settings(16px, 20px);
+    // }
+
+}
+
+%pearl {
+    // @include respond-to(A) {
+    //     @include font-settings(15px, 18px);
+    // }
+
+    // @include respond-to(B) {
+    //     @include font-settings(15px, 18px);
+    // }
+
+    // @include respond-to(C) {
+    //     @include font-settings(15px, 20px);
+    // }
+
+    // @include respond-to(D) {
+    //     @include font-settings(15px, 20px);
+    // }
+
+    font-size: 15px;
+    line-height: 20px;
+}
+
+%brilliant {
+    // @include respond-to(A) {
+    //     @include font-settings(14px, 16px);
+    // }
+
+    // @include respond-to(B) {
+    //     @include font-settings(14px, 16px);
+    // }
+
+    // @include respond-to(C) {
+    //     @include font-settings(14px, 16px);
+    // }
+
+    // @include respond-to(D) {
+    //     @include font-settings(14px, 16px);
+    // }
+}

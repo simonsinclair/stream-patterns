@@ -127,11 +127,12 @@
   .show-more {
 
     button {
-      @extend %pica;
       color: #FFF;
       border-bottom: 2px solid #315E2C;
       background-color: #499243;
+      font-size: 16px;
       font-weight: bold;
+      line-height: 22px;
       padding: 10px;
       width: 100%;
       -webkit-font-smoothing: antialiased;
@@ -158,18 +159,54 @@
   // Posts
   // -----
 
-  .headline {}
+  .headline {
 
-  .body-copy {}
-
-  .inline-link {
-
-    p > a {
+    h2 {
+      @extend %great-primer;
       font-weight: bold;
+      margin-top: 0; // Review
+      margin-bottom: 0; // Review
     }
   }
 
-  .unordered-list {}
+  .body-copy {
+
+    p {
+      @extend %pearl;
+      color: #767676;
+    }
+  }
+
+  .inline-link {
+
+    p {
+      @extend %pearl;
+      color: #767676;
+
+      > a {
+        color: #000;
+      }
+    }
+  }
+
+  .unordered-list {
+
+    p,
+    ul {
+      @extend %pearl;
+      color: #767676;
+    }
+    ul {
+      padding-left: 1em;
+    }
+      li {
+        margin-bottom: 8px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+  }
 
   .contributor {}
     .contributor__avatar,
@@ -188,28 +225,78 @@
     }
     .contributor__body {
       width: 100%;
+
+      p {
+        @extend %brevier;
+        color: #B3B3B3;
+      }
+      strong {
+        color: #767676;
+        font-weight: normal;
+      }
     }
 
   .quote {
 
     blockquote {
+      color: #000;
+      font-family: Georgia, serif;
+      font-style: italic;
 
       &::before {
         // GEL Quote Icon
+      }
+
+      cite {
+        font-family: Arial, sans-serif;
+        font-style: normal;
       }
     }
   }
 
   .email {
 
+    blockquote {
+      color: #767676;
+
+      &::before {
+
+      }
+
+      cite {
+        font-style: normal;
+      }
+    }
   }
 
-  .tweet {
+  .tweet {}
+    .tweet__wrap {
 
-  }
+      p {
+        @extend %pearl;
+        color: #767676;
+      }
+
+      time {
+        @extend %brevier;
+        color: #B3B3B3;
+        display: block;
+      }
+    }
 
   .sms {
 
+    blockquote {
+      color: #767676;
+
+      &::before {
+
+      }
+
+      cite {
+        font-style: normal;
+      }
+    }
   }
 
   .media {
