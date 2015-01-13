@@ -184,7 +184,10 @@
       color: #767676;
 
       > a {
+        border-bottom: 1px solid #DCDCDC;
         color: #000;
+
+        &:hover {}
 
         &::after {
           // ...
