@@ -79,6 +79,12 @@ header {
     line-height: 1;
     margin-top: 0;
     margin-bottom: 0;
+
+    span {
+      font-size: 60%;
+      // text-transform: uppercase;
+      vertical-align: super;
+    }
   }
 }
   .display-group {
@@ -195,14 +201,13 @@ header {
   border-radius: 5px;
   padding: 6px 0;
 
-  @include respond-to(C) {
-    padding: 6px;
+  // Space adjacent .markup's
+  + .markup {
+    margin-top: $base-line-height/2;
   }
 
-  hr {
-    // background-color: #EEE;
-    border-color: #FFF;
-    margin: $base-line-height 0;
+  @include respond-to(C) {
+    padding: 6px;
   }
 }
 
