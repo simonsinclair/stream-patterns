@@ -60,36 +60,54 @@ button {
 // PAGE
 //
 
-.display-group {
-  background-color: #000;
-  color: #FFF;
-  cursor: help;
-  margin-top: 0;
-  opacity: 0.8;
-  padding: $base-line-height / 4;
+header {
+  @extend %clearfix;
+  background-color: #CC0101;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  padding: $base-line-height/3 64px;
   position: fixed;
-    top: 0; left: 72px;
+    top: 0; left: 0;
+  width: 100%;
   z-index: 100;
+  -webkit-font-smoothing: antialiased;
+
+  h1 {
+    color: #FFF;
+    font-size: $h4-font-size;
+    float: left;
+    font-weight: bold;
+    line-height: 1;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
 }
-  .display-group__a {
-    @include respond-to(B) { display: none; }
-    @include respond-to(C) { display: none; }
+  .display-group {
+    color: #FFF;
+    cursor: help;
+    float: right;
+    line-height: 1;
+    margin-top: 0;
+    margin-bottom: 0;
   }
-  .display-group__b,
-  .display-group__c,
-  .display-group__d {
-    display: none;
-  }
-  .display-group__b {
-    @include respond-to(B) { display: inline; }
-  }
-  .display-group__c {
-    @include respond-to(C) { display: inline; }
-    @include respond-to(D) { display: none; }
-  }
-  .display-group__d {
-    @include respond-to(D) { display: inline; }
-  }
+    .display-group__a {
+      @include respond-to(B) { display: none; }
+      @include respond-to(C) { display: none; }
+    }
+    .display-group__b,
+    .display-group__c,
+    .display-group__d {
+      display: none;
+    }
+    .display-group__b {
+      @include respond-to(B) { display: inline; }
+    }
+    .display-group__c {
+      @include respond-to(C) { display: inline; }
+      @include respond-to(D) { display: none; }
+    }
+    .display-group__d {
+      @include respond-to(D) { display: inline; }
+    }
 
 .page {
   padding-bottom: $base-line-height * 4;
@@ -99,16 +117,20 @@ button {
   }
 }
 .footer {
-  margin-top: $base-line-height * 4;
+  padding-bottom: $base-line-height * 4;
   position: relative;
   text-align: center;
+
+  @include respond-to(C) {
+    margin: 0 64px;
+  }
 }
   .footer__top {
     border: 1px solid;
     display: block;
     padding: $base-line-height/4 $base-line-height/2;
     position: absolute;
-      top: 0; right: 0;
+      top: -$base-line-height/4; right: 0;
   }
 
 // Component
