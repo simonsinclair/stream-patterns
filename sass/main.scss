@@ -110,6 +110,7 @@ header {
     }
 
 .page {
+  padding-top: $base-line-height;
   padding-bottom: $base-line-height * 4;
 
   @include respond-to(C) {
@@ -159,6 +160,10 @@ header {
           a {
             background-color: #888;
             color: #FFF;
+
+            &:hover {
+              background-color: #909090;
+            }
           }
         }
       }
@@ -167,6 +172,10 @@ header {
         display: block;
         font-weight: bold;
         padding: 8px 8px 36px;
+
+        &:hover {
+          background-color: #E6E6E6;
+        }
       }
     }
 
@@ -188,6 +197,12 @@ header {
 
   @include respond-to(C) {
     padding: 6px;
+  }
+
+  hr {
+    // background-color: #EEE;
+    border-color: #FFF;
+    margin: $base-line-height 0;
   }
 }
 

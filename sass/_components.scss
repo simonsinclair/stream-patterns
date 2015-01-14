@@ -226,6 +226,8 @@
       padding-right: 12px;
 
       > img {
+        background-color: #EEE;
+        border-radius: 50%;
         display: block;
         max-width: none;
       }
@@ -236,6 +238,12 @@
       p {
         @extend %brevier;
         color: #B3B3B3;
+        margin-top: 0;
+        margin-bottom: 0;
+
+        &.contributor__name {
+          margin-bottom: 4px;
+        }
       }
       strong {
         color: #767676;
@@ -306,12 +314,12 @@
     }
   }
 
-  .media {
-
-    img {
+  .media {}
+    .media__img {
       display: block;
+      height: auto;
+      width: 100%;
     }
-  }
 
 
 } // End of .stream component.
