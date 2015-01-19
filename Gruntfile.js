@@ -71,6 +71,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-autoprefixer');
+  // grunt.loadNpmTasks('grunt-svgmin');
   grunt.loadNpmTasks('grunt-gh-pages');
 
   grunt.registerTask('default', ['sass', 'autoprefixer', 'connect', 'watch']);

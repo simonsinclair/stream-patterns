@@ -259,7 +259,7 @@
       font-style: italic;
 
       &::before {
-        // GEL Quote Icon
+        @extend %icon;
       }
 
       cite {
