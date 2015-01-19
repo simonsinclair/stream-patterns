@@ -257,9 +257,14 @@
       color: #000;
       font-family: Georgia, serif;
       font-style: italic;
+      position: relative;
 
       &::before {
         @extend %icon;
+        background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgdmlld0JveD0iMCAwIDMyIDMyIj48cGF0aCBkPSJNMTYgMTkuMzdsMTYtMTQuOTR2LTEuNDNoLTMydjI2aDMydi0yMWwtNCA0djEzaC0yNHYtMTYuODNsMTIgMTEuMnptMC0yLjc2bC0xMC4xOS05LjYxaDIwLjM4bC0xMC4xOSA5LjYxeiIvPjwvc3ZnPg==');
+        position: absolute;
+          top: 0; left: -40px;
+        // Jo
       }
 
       cite {
@@ -275,7 +280,7 @@
       color: #767676;
 
       &::before {
-
+        @extend %icon;
       }
 
       cite {
@@ -306,6 +311,7 @@
 
       &::before {
 
+        @extend %icon;
       }
 
       cite {
