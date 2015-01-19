@@ -317,8 +317,15 @@
   .media {}
     .media__img {
       display: block;
-      height: auto;
+      margin: 0 auto;
+    }
+    .media__img--wide {
       width: 100%;
+    }
+    .media__img--portrait {
+      max-height: 480px;
+      max-width: 100%;
+      width: auto;
     }
 
 

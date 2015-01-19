@@ -64,12 +64,16 @@ header {
   @extend %clearfix;
   background-color: #CC0101;
   box-shadow: 0 2px 5px rgba(0,0,0,0.3);
-  padding: $base-line-height/3 64px;
+  padding: $base-line-height/3 0;
   position: fixed;
     top: 0; left: 0;
   width: 100%;
   z-index: 100;
   -webkit-font-smoothing: antialiased;
+
+  @include respond-to(C) {
+    padding: $base-line-height/3 64px;
+  }
 
   h1 {
     color: #FFF;
@@ -79,12 +83,6 @@ header {
     line-height: 1;
     margin-top: 0;
     margin-bottom: 0;
-
-    span {
-      font-size: 60%;
-      // text-transform: uppercase;
-      vertical-align: super;
-    }
   }
 }
   .display-group {
@@ -148,15 +146,17 @@ header {
 
     h2 {
       float: left;
+      margin-right: 32px;
     }
   }
     .component__tabs {
       @extend %nav;
       float: left;
-      margin-top: 64px;
       margin-bottom: 0;
-      margin-left: 32px;
+      margin-top: 64px;
       -webkit-font-smoothing: antialiased;
+
+      @include respond-to(C) {}
 
       li {
         margin-right: 4px;
