@@ -121,20 +121,18 @@ header {
   max-width: 976px;
 }
 .footer {
+  border-top: 1px solid #DDD;
+  padding-top: $base-line-height;
   padding-bottom: $base-line-height * 4;
+  margin: 0 auto;
+  max-width: 976px;
   position: relative;
   text-align: center;
-
-  @include respond-to(C) {
-    margin: 0 64px;
-  }
 }
   .footer__top {
-    border: 1px solid;
     display: block;
-    padding: $base-line-height/4 $base-line-height/2;
     position: absolute;
-      top: -$base-line-height/4; right: 0;
+      top: 27px; right: 0;
   }
 
 // Component

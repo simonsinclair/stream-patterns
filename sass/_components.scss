@@ -13,6 +13,11 @@
   }
 }
 
+// Set up stream-contents column as if on Live.
+.stream__posts {
+  max-width: 646px;
+}
+
 // TOP STORIES
 //////////////|
 
@@ -223,7 +228,7 @@
     }
 
     .contributor__avatar {
-      padding-right: 12px;
+      padding-right: 8px;
 
       > img {
         background-color: #EEE;
@@ -291,6 +296,8 @@
 
   .tweet {}
     .tweet__wrap {
+      border: 1px solid #DDD;
+      padding: 16px;
 
       time {
         @extend %brevier;
@@ -305,11 +312,10 @@
       }
 
       .tweet__image {
-        padding-right: 12px;
+        padding-right: 8px;
 
         > img {
           background-color: #EEE;
-          // border-radius: 50%;
           display: block;
           height: 40px;
           width: 40px;
