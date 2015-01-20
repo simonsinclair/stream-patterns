@@ -33,6 +33,9 @@
     bindEvts: function() {
       $('#js-component-tabs').on('click', 'a', App.handleTabClick);
 
+      // Nullify clicks on 'dummy' (#) anchors.
+      $('body').on('click', 'a[href=#]', function(e) { e.preventDefault(); });
+
       // (Back to) Top button
       $('#js-footer-top').on('click', function(e) {
         e.preventDefault();

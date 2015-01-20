@@ -194,9 +194,7 @@
 
         &:hover {}
 
-        &::after {
-          // ...
-        }
+        &::after {}
       }
     }
   }
@@ -347,6 +345,24 @@
           color: #767676;
         }
       }
+
+  .cps-tweet {}
+    .cps-tweet__wrap {
+
+      p {
+        @extend %pearl;
+        color: #767676;
+
+        > a {
+          border-bottom: 1px solid #DCDCDC;
+          color: #000;
+
+          &:hover {}
+
+          &::after {}
+        }
+      }
+    }
 
   .sms {
 
