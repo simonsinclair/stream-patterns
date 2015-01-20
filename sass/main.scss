@@ -185,7 +185,8 @@ header {
 // Panels
 .panel {}
   .panel--furniture {}
-  .panel--posts {
+  .panel--content,
+  .panel--demo {
     display: none;
   }
 
