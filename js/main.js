@@ -11,6 +11,11 @@
         name: "posts",
         path: "includes/posts.html",
         destination: "#js-panel-posts"
+      },
+      {
+        name: "demo",
+        path: "includes/demo.html",
+        destination: "#js-panel-demo"
       }
     ],
 

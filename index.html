@@ -14,14 +14,16 @@
   </head>
   <body>
     <header>
-      <h1>Stream Patterns</h1>
-      <p class="display-group" title="Your current browser width">
-        Group:
-        <span class="display-group__a">A</span>
-        <span class="display-group__b">B</span>
-        <span class="display-group__c">C</span>
-        <span class="display-group__d">D</span>
-      </p>
+      <div class="header-inner">
+        <h1>Stream Patterns</h1>
+        <p class="display-group" title="Your current browser width">
+          Group:
+          <span class="display-group__a">A</span>
+          <span class="display-group__b">B</span>
+          <span class="display-group__c">C</span>
+          <span class="display-group__d">D</span>
+        </p>
+      </div>
     </header>
 
     <div class="page" id="page">
@@ -53,6 +55,7 @@
           <ul class="component__tabs" id="js-component-tabs">
             <li class="active"><a href="#" data-panel-name="furniture">Furniture</a></li>
             <li><a href="#" data-panel-name="posts">Posts</a></li>
+            <li><a href="#" data-panel-name="demo">Demo</a></li>
           </ul>
         </div>
 
@@ -128,6 +131,7 @@
         </div><!-- /.panel.panel--furniture -->
 
         <div class="panel panel--posts" id="js-panel-posts"></div>
+        <div class="panel panel--demo" id="js-panel-demo"></div>
 
       </div><!-- /.stream -->
 
