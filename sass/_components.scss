@@ -292,17 +292,55 @@
   .tweet {}
     .tweet__wrap {
 
-      p {
-        @extend %pearl;
-        color: #767676;
-      }
-
       time {
         @extend %brevier;
         color: #B3B3B3;
         display: block;
       }
     }
+      .tweet__image,
+      .tweet__title-group {
+        display: table-cell;
+        vertical-align: middle;
+      }
+
+      .tweet__image {
+        padding-right: 12px;
+
+        > img {
+          background-color: #EEE;
+          // border-radius: 50%;
+          display: block;
+          height: 40px;
+          width: 40px;
+          max-width: none;
+        }
+      }
+      .tweet__title-group {
+        width: 100%;
+
+        p {
+          @extend %brevier;
+          color: #B3B3B3;
+          margin-top: 0;
+          margin-bottom: 0;
+
+          &.contributor__name {
+            margin-bottom: 4px;
+          }
+        }
+        strong {
+          color: #767676;
+          font-weight: normal;
+        }
+      }
+      .tweet__body {
+
+        p {
+          @extend %pearl;
+          color: #767676;
+        }
+      }
 
   .sms {
 

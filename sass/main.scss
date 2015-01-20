@@ -63,17 +63,13 @@ button {
 header {
   @extend %clearfix;
   background-color: #CC0101;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
-  padding: $base-line-height/3 0;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.35);
+  padding: $base-line-height/2 0;
   position: fixed;
     top: 0; left: 0;
   width: 100%;
   z-index: 100;
   -webkit-font-smoothing: antialiased;
-
-  @include respond-to(C) {
-    padding: $base-line-height/3 64px;
-  }
 
   h1 {
     color: #FFF;
@@ -85,6 +81,11 @@ header {
     margin-bottom: 0;
   }
 }
+  .header-inner {
+    margin: 0 auto;
+    max-width: 976px;
+  }
+
   .display-group {
     color: #FFF;
     cursor: help;
@@ -116,12 +117,8 @@ header {
 .page {
   padding-top: $base-line-height;
   padding-bottom: $base-line-height * 4;
-  margin: auto 0;
+  margin: 0 auto;
   max-width: 976px;
-
-  @include respond-to(C) {
-    margin: 0 64px;
-  }
 }
 .footer {
   padding-bottom: $base-line-height * 4;
