@@ -8,9 +8,9 @@
 
     includes: [
       {
-        name: "posts",
-        path: "includes/posts.html",
-        destination: "#js-panel-posts"
+        name: "content",
+        path: "includes/content.html",
+        destination: "#js-panel-content"
       },
       {
         name: "demo",
@@ -32,9 +32,14 @@
 
     bindEvts: function() {
       $('#js-component-tabs').on('click', 'a', App.handleTabClick);
+
+      // Nullify clicks on 'dummy' (#) anchors.
+      $('body').on('click', 'a[href=#]', function(e) { e.preventDefault(); });
+
+      // (Back to) Top button
       $('#js-footer-top').on('click', function(e) {
         e.preventDefault();
-        $('html,body').scrollTop(0);
+        $('html, body').animate({ scrollTop: 0 }, 250);
       });
     },
 
