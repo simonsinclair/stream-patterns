@@ -192,6 +192,15 @@ header {
 
 // Element
 .element {}
+  .element__status {
+    color: #FFF;
+    border-radius: 3px;
+    background-color: #5CB85C;
+    font-size: $base-font-size / 1.62;
+    padding: 2px 4px;
+    text-transform: uppercase;
+    vertical-align: middle;
+  }
 
 // Markup
 .markup {
