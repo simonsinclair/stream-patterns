@@ -343,6 +343,19 @@
         p {
           @extend %pearl;
           color: #767676;
+
+          > a {
+            border-bottom: 1px solid #DCDCDC;
+            color: #000;
+
+            &:hover {}
+
+            &::after {}
+          }
+        }
+        img {
+          display: block;
+          max-width: 100%;
         }
       }
 
@@ -389,7 +402,7 @@
       width: 100%;
     }
     .media__img--portrait {
-      max-height: 480px;
+      max-height: 358px;
       max-width: 100%;
       width: auto;
     }
