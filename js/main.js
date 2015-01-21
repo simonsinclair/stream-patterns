@@ -4,7 +4,7 @@
 (function(w, $, undefined) {
   "use strict";
 
-	var App = {
+  var App = {
 
     includes: [
       {
