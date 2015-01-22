@@ -459,6 +459,13 @@ sub {
     //     @include font-settings(16px, 20px);
     // }
 
+    font-size: 18px;
+    line-height: 20px;
+
+    @include respond-to(C) {
+      font-size: 16px;
+      line-height: 20px;
+    }
 }
 
 %pearl {

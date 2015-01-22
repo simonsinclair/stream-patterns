@@ -189,7 +189,7 @@
   .headline {
 
     h2 {
-      @extend %great-primer;
+      @extend %double-pica;
       font-weight: bold;
       margin-top: 0; // Review
       margin-bottom: 0; // Review
@@ -199,7 +199,7 @@
   .body-copy {
 
     p {
-      @extend %pearl;
+      @extend %pica;
       color: #767676;
     }
   }
@@ -207,7 +207,7 @@
   .inline-link {
 
     p {
-      @extend %pearl;
+      @extend %pica;
       color: #767676;
 
       > a {
@@ -220,12 +220,25 @@
       }
     }
   }
+  .inline-link--external {
+
+    p {
+
+      > a {
+
+        &::after {
+          content: '[Icon here]';
+          display: inline-block;
+        }
+      }
+    }
+  }
 
   .unordered-list {
 
     p,
     ul {
-      @extend %pearl;
+      @extend %pica;
       color: #767676;
     }
     ul {
@@ -276,9 +289,26 @@
       }
     }
 
+  .read-full-cta {
+
+    a {
+      @extend %pica;
+
+      &::after {
+        content: "[Icon here]";
+        display: inline-block;
+        margin-left: 4px;
+      }
+    }
+  }
+
+  // TYPES
+  ////////|
+
   .quote {
 
     blockquote {
+      @extend %great-primer;
       color: #000;
       font-family: Georgia, serif;
       font-style: italic;
@@ -302,6 +332,7 @@
   .email {
 
     blockquote {
+      @extend %pica;
       color: #767676;
 
       &::before {
@@ -363,7 +394,7 @@
       .tweet__body {
 
         p {
-          @extend %pearl;
+          @extend %pica;
           color: #767676;
 
           > a {
@@ -385,7 +416,7 @@
     .cps-tweet__wrap {
 
       p {
-        @extend %pearl;
+        @extend %pica;
         color: #767676;
 
         > a {
@@ -402,6 +433,7 @@
   .sms {
 
     blockquote {
+      @extend %pica;
       color: #767676;
 
       &::before {
@@ -415,19 +447,22 @@
     }
   }
 
-  .media {}
-    .media__img {
+  .media {
+
+    img {
       display: block;
       margin: 0 auto;
+      width: 100%; // Always fill the container - upscale if necessary.
     }
-    .media__img--wide {
-      width: 100%;
-    }
-    .media__img--portrait {
-      max-height: 358px;
+  }
+  .media--portrait {
+
+    img {
+      max-height: 358px; // Prevent portrait images being taller than their 19:9 counterparts
       max-width: 100%;
       width: auto;
     }
+  }
 
 
 } // End of .stream component.
