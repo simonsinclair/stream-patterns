@@ -64,12 +64,16 @@
     .header-wrap {
       background: #EEE;
       overflow: hidden;
-      padding: 12px 8px;
+      padding: 10px 8px 12px;
       position: relative;
+
+      @include respond-to(C) {
+        padding: 14px 16px 16px;
+      }
 
       // Heading group.
       h2 {
-        @extend %pica;
+        @extend %great-primer;
         font-weight: normal;
         margin-top: 0;
         margin-bottom: 0;
@@ -98,13 +102,24 @@
       // Refresh button group.
       button {
         @extend %pica;
-        background-color: #DDD;
-        padding: 4px 8px;
+        background-color: #777;
+        color: #FFF;
+        font-weight: bold;
+        padding: 5px 8px 7px;
         position: absolute;
-          top: 9px; right: 8px;
+          top: 7px; right: 8px;
+        -webkit-font-smoothing: antialiased;
+
+        @include respond-to(C) {
+          padding: 6px 8px;
+          top: 12px; right: 16px;
+        }
+        @include respond-to(D) {
+          top: 11px;
+        }
 
         &:hover {
-          background-color: #d5d5d5;
+          background-color: #888;
         }
 
         // 'Refresh' text.
