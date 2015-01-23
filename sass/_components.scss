@@ -313,9 +313,9 @@
       &::before {
         @extend .icon;
         @extend .icon--quote;
+        content: '';
         position: absolute;
           top: 0; left: -40px;
-        // Jo
       }
 
       cite {
@@ -330,9 +330,14 @@
     blockquote {
       @extend %pica;
       color: #767676;
+      position: relative;
 
       &::before {
         @extend .icon;
+        @extend .icon--email;
+        content: '';
+        position: absolute;
+          top: 0; left: -40px;
       }
 
       cite {
@@ -431,9 +436,14 @@
     blockquote {
       @extend %pica;
       color: #767676;
+      position: relative;
 
       &::before {
         @extend .icon;
+        @extend .icon--sms;
+        content: '';
+        position: absolute;
+          top: 0; left: -40px;
       }
 
       cite {
