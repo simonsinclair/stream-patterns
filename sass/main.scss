@@ -235,9 +235,9 @@ header {
   }
 }
 
-%icon {
-  content: '';
-  display: block;
+.icon {
+  background-size: contain;
+  display: inline-block;
   height: 32px;
   width: 32px;
 }

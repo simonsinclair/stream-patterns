@@ -73,7 +73,7 @@ module.exports = function(grunt) {
 
     grunticon: {
       options: {
-        cssprefix: '.icon-svg--'
+        cssprefix: '.icon--'
       },
       dist: {
         files: [
