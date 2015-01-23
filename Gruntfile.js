@@ -57,6 +57,44 @@ module.exports = function(grunt) {
       },
     },
 
+    svgmin: {
+      options: {},
+      dist: {
+        files: [
+          {
+            expand: true,
+            cwd: 'svg/',
+            src: ['*.svg'],
+            dest: 'grunticon/svgmin/'
+          }
+        ]
+      }
+    },
+
+    grunticon: {
+      options: {
+        cssprefix: '.icon-svg--'
+      },
+      dist: {
+        files: [
+          {
+            expand: true,
+            cwd: 'grunticon/svgmin/',
+            src: ['*.svg'],
+            dest: 'grunticon/'
+          }
+        ]
+      }
+    },
+
+    copy: {
+      grunticon: {
+        files: {
+          'sass/_icons.scss': 'grunticon/icons.data.svg.css'
+        }
+      }
+    },
+
     'gh-pages': {
       src: ['**'],
       options: {
@@ -71,9 +109,14 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-autoprefixer');
-  // grunt.loadNpmTasks('grunt-svgmin');
+
+  grunt.loadNpmTasks('grunt-svgmin');
+  grunt.loadNpmTasks('grunt-grunticon');
+  grunt.loadNpmTasks('grunt-contrib-copy');
+
   grunt.loadNpmTasks('grunt-gh-pages');
 
-  grunt.registerTask('default', ['sass', 'autoprefixer', 'connect', 'watch']);
+  grunt.registerTask('default', ['icon', 'sass', 'autoprefixer', 'connect', 'watch']);
+  grunt.registerTask('icon', ['svgmin', 'grunticon', 'copy']);
   grunt.registerTask('deploy', ['gh-pages']);
 };
