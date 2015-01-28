@@ -35,9 +35,9 @@
       // Red line, or 'branch'.
       .heading__stitch {
         background-color: #CC0101;
-        height: 2px;
+        height: 1px;
         margin-bottom: 4px;
-        width: 36px;
+        width: 40px;
 
         @include respond-to(C) {
           margin-bottom: 6px;
