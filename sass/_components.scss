@@ -28,8 +28,13 @@
     .heading {
       @extend %great-primer;
       color: #333;
-      margin-top: 20px;
-      margin-bottom: 16px;
+      margin-top: 16px;
+      margin-bottom: 12px;
+
+      @include respond-to(C) {
+        margin-top: 20px;
+        margin-bottom: 16px;
+      }
     }
 
       // Red line, or 'branch'.
