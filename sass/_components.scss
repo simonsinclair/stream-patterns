@@ -230,8 +230,9 @@
       > a {
 
         &::after {
-          content: '[Icon here]';
-          display: inline-block;
+          @extend .icon;
+          @extend .icon--external;
+          content: '';
         }
       }
     }
@@ -298,9 +299,11 @@
       @extend %pica;
 
       &::after {
-        content: "[Icon here]";
-        display: inline-block;
-        margin-left: 4px;
+        @extend .icon, .icon--small;
+        @extend .icon--chevron-r-brand;
+        content: '';
+        height: 16px;
+        width: 16px;
       }
     }
   }
@@ -422,6 +425,8 @@
 
   .cps-tweet {}
     .cps-tweet__wrap {
+      margin-left: 40px;
+      position: relative;
 
       p {
         @extend %pica;
@@ -435,6 +440,14 @@
 
           &::after {}
         }
+      }
+
+      &::before {
+        @extend .icon;
+        @extend .icon--twitter;
+        content: '';
+        position: absolute;
+          top: 0; left: -40px;
       }
     }
 
