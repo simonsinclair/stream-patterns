@@ -190,12 +190,15 @@ header {
 .panel {}
   .panel--furniture {}
 
-  // Default display:none
+  // The panels hidden by default
   .panel--content,
   .panel--demo {
     display: none;
   }
 
+  .panel--content {
+    max-width: 646px;
+  }
   .panel--demo {
     padding-top: $base-line-height * 2;
   }

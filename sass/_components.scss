@@ -14,8 +14,12 @@
   }
 }
 
-// Set up stream-contents column as if on Live.
-.stream__posts {
+// CONTAINERS
+/////////////|
+
+.stream__posts {}
+.stream__post {
+  margin: 0 auto;
   max-width: 646px;
 }
 
