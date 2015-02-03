@@ -20,7 +20,7 @@
 .stream__posts {}
 .stream__post {
   margin: 0 auto;
-  max-width: 646px;
+  max-width: $stream-max-width;
 }
 
 // TOP STORIES
@@ -168,6 +168,8 @@
       font-size: 16px;
       font-weight: bold;
       line-height: 22px;
+      margin: 0 auto;
+      max-width: $stream-max-width;
       padding: 10px;
       width: 100%;
       -webkit-font-smoothing: antialiased;

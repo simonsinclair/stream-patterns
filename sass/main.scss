@@ -5,6 +5,8 @@
 @import 'typography';
 @import 'icons';
 
+$stream-max-width: 650px;
+
 * {
   &,
   &:before,
@@ -197,7 +199,7 @@ header {
   }
 
   .panel--content {
-    max-width: 646px;
+    max-width: $stream-max-width;
   }
   .panel--demo {
     padding-top: $base-line-height * 2;
