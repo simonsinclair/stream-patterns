@@ -189,9 +189,15 @@ header {
 // Panels
 .panel {}
   .panel--furniture {}
+
+  // Default display:none
   .panel--content,
   .panel--demo {
     display: none;
+  }
+
+  .panel--demo {
+    padding-top: $base-line-height * 2;
   }
 
 // Element
@@ -239,11 +245,19 @@ header {
   background-size: contain;
   display: inline-block;
   height: 32px;
-  width: 32px;
+  width: 32px
 }
-.icon--small {
+.icon--m {
+  height: 24px;
+  width: 24px;
+}
+.icon--s {
   height: 16px;
   width: 16px;
+}
+.icon--xs {
+  height: 13px;
+  width: 13px;
 }
 
 // Utility

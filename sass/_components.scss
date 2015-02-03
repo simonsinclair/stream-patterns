@@ -1,8 +1,9 @@
 // _components.scss
 //
 
-// Reset markup 'canvases' to use Live defaults.
-.markup {
+// Set similar defaults as Live for all components
+.markup,
+.panel--demo {
   color: #000;
   font-family: Arial, sans-serif;
 
@@ -230,9 +231,11 @@
       > a {
 
         &::after {
-          @extend .icon;
+          @extend .icon, .icon--xs;
           @extend .icon--external;
           content: '';
+          margin-right: 2px;
+          margin-left: 4px;
         }
       }
     }
@@ -297,13 +300,15 @@
 
     a {
       @extend %pica;
+      position: relative;
 
       &::after {
-        @extend .icon, .icon--small;
+        @extend .icon, .icon--xs;
         @extend .icon--chevron-r-brand;
         content: '';
-        height: 16px;
-        width: 16px;
+        margin-left: 4px;
+        position: relative;
+          bottom: -1px;
       }
     }
   }
