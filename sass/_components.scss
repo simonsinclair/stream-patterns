@@ -1,7 +1,9 @@
 // _components.scss
 //
 
-// Set similar defaults as Live for all components
+// Set similar defaults as Live for all components.
+// We don't use .markup in the Demo tab, which is why
+// we need to set these defaults for that here too.
 .markup,
 .panel--demo {
   color: #000;
@@ -17,7 +19,8 @@
 // CONTAINERS
 /////////////|
 
-// Center and fit element to stream content column
+// Used to center in the 'Stream column' - the
+// grid implementation on Live handles this.
 %fit--stream {
   margin: 0;
 
@@ -26,15 +29,18 @@
   }
 }
 
+// The Posts container
 .stream__posts {
   margin-right: 16px;
   margin-left: 16px;
 
-  > .stream__post:first-of-type {
+  > .stream__post:first-child {
     border-top: none;
     padding-top: 0;
   }
 }
+
+// A Post container
 .stream__post {
   @extend %fit--stream;
 
@@ -43,7 +49,22 @@
   padding-top: 24px;
 }
 
+// DEMO TAB
+// Some components' styles change when in use.
+/////////////////////////////////////////////|
+
+.panel--demo {
+
+  .stream__posts {
+    @extend %clearfix;
+  }
+  .timestamp {
+    float: left;
+  }
+}
+
 // TOP STORIES
+// Section
 //////////////|
 
 .top-stories {
@@ -81,13 +102,14 @@
 } // End of .top-stories component.
 
 // STREAM
-/////////|
+// Section
+//////////|
 
 .stream {
 
 
-  // Furniture
-  // ---------
+  // Furniture tab
+  // -------------
 
   .header {
 
@@ -155,7 +177,7 @@
         .icon--refresh {
           height: 22px;
           width: 22px;
-          // transform: rotate(-45deg);
+          // transform: rotate(-45deg); // Used for testing
           vertical-align: middle;
         }
       }
@@ -214,8 +236,8 @@
   }
 
 
-  // Posts
-  // -----
+  // Content tab
+  // -----------
 
   .headline {
 
@@ -340,8 +362,7 @@
     }
   }
 
-  // TYPES
-  ////////|
+  // Post Types
 
   .quote {
 
@@ -515,7 +536,7 @@
   .media--portrait {
 
     img {
-      max-height: 358px; // Prevent portrait images being taller than their 19:9 counterparts
+      max-height: 358px; // Prevent portrait images being taller than their 16:9 counterparts
       max-width: 100%;
       width: auto;
     }
