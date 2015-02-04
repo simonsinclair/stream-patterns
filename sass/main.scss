@@ -5,8 +5,6 @@
 @import 'typography';
 @import 'icons';
 
-$stream-max-width: 650px;
-
 * {
   &,
   &:before,
@@ -139,9 +137,7 @@ header {
   }
 
 // Component
-.component {
-
-}
+.component {}
   .component__menu {
     @extend %clearfix;
     border-bottom: 1px solid #888;
@@ -199,7 +195,7 @@ header {
   }
 
   .panel--content {
-    max-width: $stream-max-width;
+    @extend %fit--stream;
   }
   .panel--demo {
     padding-top: $base-line-height * 2;
