@@ -19,8 +19,8 @@
 // CONTAINERS
 /////////////|
 
-// Used to center in the 'Stream column' - the
-// grid implementation on Live handles this.
+// Used to get content in the 'Stream column'.
+// The grid implementation on Live handles this.
 %fit--stream {
   margin: 0;
 
@@ -41,13 +41,15 @@
 }
 
 // A Post container
+// Contains: Timestamp, Content
 .stream__post {
-  @extend %fit--stream;
-
   border-top: 1px solid #E5E5E5;
   margin-top: 24px;
   padding-top: 24px;
 }
+  .stream__content {
+    @extend %fit--stream;
+  }
 
 // DEMO TAB
 // Some components' styles change when in use.
@@ -59,7 +61,10 @@
     @extend %clearfix;
   }
   .timestamp {
-    float: left;
+
+    @include respond-to(C) {
+      float: left;
+    }
   }
 }
 
@@ -198,6 +203,7 @@
     time {
       @extend %pica;
       color: #606060;
+      margin-top: 8px;
     }
   }
 
