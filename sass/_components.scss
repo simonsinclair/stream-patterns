@@ -35,8 +35,11 @@
   margin-left: 16px;
 
   > .stream__post:first-child {
-    border-top: none;
-    padding-top: 0;
+
+      .stream__content {
+        border-top: none;
+        // padding-top: 0;
+      }
   }
 }
 
@@ -46,9 +49,19 @@
   border-top: 1px solid #E5E5E5;
   margin-top: 24px;
   padding-top: 24px;
+
+  @include respond-to(C) {
+    border-top: none;
+    padding-top: 0;
+  }
 }
   .stream__content {
     @extend %fit--stream;
+
+    @include respond-to(C) {
+      border-top: 1px solid #E5E5E5;
+      padding-top: 24px;
+    }
   }
 
 // DEMO TAB
@@ -143,7 +156,7 @@
         // Latest label.
         .latest {
           @extend %minion;
-          background-color: #CC0101;
+          background-color: #000;
           color: #FFF;
           margin-right: 2px;
           padding: 2px 4px;
@@ -200,10 +213,16 @@
 
   .timestamp {
 
+    @include respond-to(C) {
+      margin-top: 24px;
+      padding-right: 32px;
+      text-align: right;
+      width: 16.66667%;
+    }
+
     time {
       @extend %pica;
       color: #606060;
-      margin-top: 8px;
     }
   }
 
