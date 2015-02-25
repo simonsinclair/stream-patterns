@@ -290,7 +290,6 @@
       color: #767676;
 
       > a {
-        border-bottom: 1px solid #DCDCDC;
         color: #000;
 
         &:hover {}
@@ -400,14 +399,15 @@
       position: relative;
 
       &::before {
-        @extend .icon;
+        @extend .icon, .icon--m;
         @extend .icon--quote;
         content: '';
         position: absolute;
-          top: 0; left: -40px;
+          top: 3px; left: -32px;
       }
 
       cite {
+        @extend %pica;
         font-family: Arial, sans-serif;
         font-style: normal;
       }
@@ -422,11 +422,11 @@
       position: relative;
 
       &::before {
-        @extend .icon;
+        @extend .icon, .icon--m;
         @extend .icon--email;
         content: '';
         position: absolute;
-          top: 0; left: -40px;
+          top: 1px; left: -32px;
       }
 
       cite {
@@ -439,12 +439,6 @@
     .tweet__wrap {
       border: 1px solid #DDD;
       padding: 16px;
-
-      time {
-        @extend %brevier;
-        color: #B3B3B3;
-        display: block;
-      }
     }
       .tweet__image,
       .tweet__title-group {
@@ -486,9 +480,9 @@
         p {
           @extend %pica;
           color: #767676;
+          font-family: Georgia, serif;
 
           > a {
-            border-bottom: 1px solid #DCDCDC;
             color: #000;
 
             &:hover {}
@@ -501,10 +495,25 @@
           max-width: 100%;
         }
       }
+      .tweet__footer {
+        @extend %clearfix;
+
+        .icon--twitter {
+          float: left;
+          margin-top: 7px;
+        }
+        time {
+          @extend %brevier;
+          color: #B3B3B3;
+          float: left;
+          margin-top: 8px;
+          margin-left: 4px;
+        }
+      }
 
   .cps-tweet {}
     .cps-tweet__wrap {
-      margin-left: 40px;
+      margin-left: 32px;
       position: relative;
 
       p {
@@ -512,7 +521,6 @@
         color: #767676;
 
         > a {
-          border-bottom: 1px solid #DCDCDC;
           color: #000;
 
           &:hover {}
@@ -522,11 +530,11 @@
       }
 
       &::before {
-        @extend .icon;
+        @extend .icon, .icon--m;
         @extend .icon--twitter;
         content: '';
         position: absolute;
-          top: 0; left: -40px;
+          top: 1px; left: -32px;
       }
     }
 
@@ -538,11 +546,11 @@
       position: relative;
 
       &::before {
-        @extend .icon;
+        @extend .icon, .icon--m;
         @extend .icon--sms;
         content: '';
         position: absolute;
-          top: 0; left: -40px;
+          top: 2px; left: -32px;
       }
 
       cite {

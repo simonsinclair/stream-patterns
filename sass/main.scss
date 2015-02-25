@@ -57,6 +57,10 @@ button {
     outline: none;
   }
 }
+blockquote {
+  margin-right: 0;
+  margin-left: 24px+8;
+}
 
 // PAGE
 //
@@ -257,8 +261,8 @@ header {
   width: 16px;
 }
 .icon--xs {
-  height: 13px;
-  width: 13px;
+  height: 12px;
+  width: 12px;
 }
 
 // Utility
