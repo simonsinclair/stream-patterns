@@ -35,11 +35,16 @@
   margin-left: 16px;
 
   > .stream__post:first-child {
+    border-top: none;
+    padding-top: 0;
 
-      .stream__content {
-        border-top: none;
-        // padding-top: 0;
-      }
+    .timestamp time {
+      margin-top: 0;
+    }
+    .stream__content {
+      border: none;
+      padding-top: 0;
+    }
   }
 }
 
@@ -218,6 +223,7 @@
       @extend %pica;
       color: #606060;
       display: block;
+      margin-bottom: 8px;
 
       @include respond-to(C) {
         margin-top: 24px;
@@ -270,8 +276,8 @@
     h2 {
       @extend %double-pica;
       font-weight: bold;
-      margin-top: 0; // Review
-      margin-bottom: 0; // Review
+      margin-top: 0;
+      margin-bottom: 12px;
     }
   }
 
@@ -392,8 +398,8 @@
   .quote {
 
     blockquote {
-      @extend %great-primer;
-      color: #000;
+      @extend %paragon;
+      color: #767676;
       font-family: Georgia, serif;
       font-style: italic;
       position: relative;
@@ -408,6 +414,7 @@
 
       cite {
         @extend %pica;
+        color: #767676;
         font-family: Arial, sans-serif;
         font-style: normal;
       }
