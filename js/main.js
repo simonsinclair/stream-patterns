@@ -5,6 +5,7 @@
   "use strict";
 
   var App = {
+    checker: true,
 
     includes: [
       {
@@ -41,6 +42,9 @@
         e.preventDefault();
         $('html, body').animate({ scrollTop: 0 }, 250);
       });
+
+      // Toggle .markup checkboard background and padding.
+      $('#js-checker-toggle').on('change', App.toggleChecker);
     },
 
     handleTabClick: function(e) {
@@ -57,6 +61,15 @@
     activateTabPanel: function(panelName) {
       $('.panel').hide();
       $('#js-panel-' + panelName).show();
+    },
+
+    toggleChecker: function() {
+      if( App.checker ) {
+        $('html').removeClass('checker');
+      } else {
+        $('html').addClass('checker');
+      }
+      App.checker = !App.checker;
     }
   };
 
