@@ -92,6 +92,7 @@ header {
   }
     .checker-toggle {
       color: #FFF;
+      cursor: pointer;
       float: right;
       line-height: 1;
       margin-top: 0;
@@ -223,18 +224,22 @@ header {
   }
 
 // Markup
+.checker {
+
+  .markup {
+    background-image: url('../img/checker.png');
+    @include respond-to(C) {
+    padding: 6px;
+  }
+  }
+}
 .markup {
-  background-image: url('../img/checker.png');
   border-radius: 5px;
   padding: 6px 0;
 
   // Space adjacent .markup's
   + .markup {
     margin-top: $base-line-height/2;
-  }
-
-  @include respond-to(C) {
-    padding: 6px;
   }
 }
 

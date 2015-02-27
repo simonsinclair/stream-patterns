@@ -245,6 +245,7 @@
       font-size: 16px;
       font-weight: bold;
       line-height: 22px;
+      margin-top: 36px;
       padding: 10px;
       text-align: center;
       -webkit-font-smoothing: antialiased;
@@ -253,7 +254,7 @@
         background-color: #4F9E48;
       }
       &:active {
-        margin-top: 1px;
+        margin-top: 36px+1;
         border-bottom-width: 1px;
       }
     }
