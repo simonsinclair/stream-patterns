@@ -76,7 +76,8 @@ module.exports = function(grunt) {
         cssprefix: '.icon--',
         colors: {
           brand: '#CC0101',
-          copy: '#767676'
+          copy: '#767676',
+          hover: '#10619E'
         }
       },
       dist: {
