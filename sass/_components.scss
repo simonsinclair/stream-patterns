@@ -60,6 +60,9 @@
     padding-top: 0;
   }
 }
+.stream__post--breaking {
+  // TO DO
+}
   .stream__content {
     @extend %fit--stream;
 
@@ -598,6 +601,5 @@
       width: auto;
     }
   }
-
 
 } // End of .stream component.

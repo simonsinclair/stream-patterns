@@ -66,10 +66,11 @@ blockquote {
 //
 
 header {
-  @extend %clearfix;
-  background-color: #CC0101;
+  // @extend %clearfix;
+  // background-color: #CC0101;
+  background-color: rgba(0,0,0,0.7);
   box-shadow: 0 2px 5px rgba(0,0,0,0.35);
-  padding: $base-line-height/2 0;
+  padding: $base-line-height/2+1 0 $base-line-height/2-1;
   position: fixed;
     top: 0; left: 0;
   width: 100%;
@@ -87,6 +88,7 @@ header {
   }
 }
   .header-inner {
+    @extend %clearfix;
     margin: 0 auto;
     max-width: 976px;
   }
@@ -228,9 +230,10 @@ header {
 
   .markup {
     background-image: url('../img/checker.png');
+
     @include respond-to(C) {
-    padding: 6px;
-  }
+      padding: 6px;
+    }
   }
 }
 .markup {
