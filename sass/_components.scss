@@ -63,35 +63,58 @@
       padding-top: 0;
     }
   }
-.stream__post--breaking {
-  background-color: #F5F5F5;
-  border-top: none;
-  border-left: 4px solid #CC0101;
-  margin-right: -16px;
-  margin-left: -16px;
-  padding: 16px 16px 16px 16-4px;
 
-  @include respond-to(C) {
-    border-left-width: 6px;
-    padding-left: 16-6px;
-  }
-
-  .timestamp time {
-    color: #CC0101;
-  }
-
-  .body-copy p:last-child {
-    margin-bottom: 0;
-  }
-}
-  .stream__content {
-    @extend %fit--stream;
+  // A variation of .stream__post for breaking news
+  .stream__post--breaking {
+    background-color: #F5F5F5;
+    border-top: none;
+    border-left: 4px solid #CC0101;
+    margin-right: -16px;
+    margin-left: -16px;
+    padding: 16px 16px 16px 16-4px;
 
     @include respond-to(C) {
-      border-top: 1px solid #E5E5E5;
-      padding-top: 24px;
+      border-left-width: 6px;
+      padding-left: 16-6px;
+    }
+
+    .timestamp time {
+      color: #CC0101;
+      margin-top: 4px;
+    }
+    .body-copy p:last-child {
+      margin-bottom: 0;
+    }
+    .stream__content {
+
+      @include respond-to(C) {
+        border-top: none;
+        padding-top: 0;
+      }
+    }
+
+    // For all stream posts that follow a breaking one:
+    + .stream__post {
+      border-top: none;
+      margin-top: 0;
+
+      .stream__content {
+
+        @include respond-to(C) {
+          border-top: none;
+        }
+      }
     }
   }
+
+    .stream__content {
+      @extend %fit--stream;
+
+      @include respond-to(C) {
+        border-top: 1px solid #E5E5E5;
+        padding-top: 24px;
+      }
+    }
 }
 
 // DEMO TAB
@@ -306,6 +329,30 @@
       font-weight: bold;
       margin-top: 0;
       margin-bottom: 12px;
+    }
+
+    .headline__label {
+      @extend %minion;
+      background-color: #CC0101;
+      color: #FFF;
+      display: inline-block;
+      margin-right: 2px;
+      margin-bottom: 4px;
+      padding: 2px 4px;
+      text-transform: uppercase;
+
+      @include respond-to(C) {
+        margin-bottom: 0;
+        vertical-align: middle;
+      }
+    }
+    .headline__title {
+      display: block;
+
+      @include respond-to(C) {
+        display: inline;
+        vertical-align: middle;
+      }
     }
   }
 
