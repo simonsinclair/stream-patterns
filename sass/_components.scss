@@ -30,38 +30,59 @@
 }
 
 // The Posts container
-.stream__posts {
-  margin-right: 16px;
-  margin-left: 16px;
+.stream {
+  .stream__posts {
+    margin-right: 16px;
+    margin-left: 16px;
 
-  > .stream__post:first-child {
-    border-top: none;
-    padding-top: 0;
-
-    .timestamp time {
-      margin-top: 0;
-    }
-    .stream__content {
-      border: none;
+    > .stream__post:first-child {
+      border-top: none;
       padding-top: 0;
+
+      .timestamp time {
+        margin-top: 0;
+      }
+      .stream__content {
+        border: none;
+        padding-top: 0;
+      }
     }
   }
 }
 
 // A Post container
 // Contains: Timestamp, Content
-.stream__post {
-  border-top: 1px solid #E5E5E5;
-  margin-top: 24px;
-  padding-top: 24px;
+.stream {
+  .stream__post {
+    border-top: 1px solid #E5E5E5;
+    margin-top: 24px;
+    padding-top: 24px;
+
+    @include respond-to(C) {
+      border-top: none;
+      padding-top: 0;
+    }
+  }
+.stream__post--breaking {
+  background-color: #F5F5F5;
+  border-top: none;
+  border-left: 4px solid #CC0101;
+  margin-right: -16px;
+  margin-left: -16px;
+  padding: 16px 16px 16px 16-4px;
 
   @include respond-to(C) {
-    border-top: none;
-    padding-top: 0;
+    border-left-width: 6px;
+    padding-left: 16-6px;
   }
-}
-.stream__post--breaking {
-  // TO DO
+
+  .timestamp time {
+    color: #CC0101;
+  }
+
+  .body-copy p:last-child {
+    margin-bottom: 0;
+  }
 }
   .stream__content {
     @extend %fit--stream;
@@ -71,6 +92,7 @@
       padding-top: 24px;
     }
   }
+}
 
 // DEMO TAB
 // Some components' styles change when in use.
@@ -78,14 +100,16 @@
 
 .panel--demo {
 
-  .stream__posts {
-    @extend %clearfix;
-  }
-  .timestamp {
+  .stream {
+    .stream__posts {
+      @extend %clearfix;
+    }
+    .timestamp {
 
-    @include respond-to(C) {
-      float: left;
-      width: 16.66667%;
+      @include respond-to(C) {
+        float: left;
+        width: 16.66667%;
+      }
     }
   }
 }
@@ -163,7 +187,7 @@
       }
 
         // Latest label.
-        .latest {
+        .label {
           @extend %minion;
           background-color: #000;
           color: #FFF;
@@ -397,14 +421,14 @@
         @extend .icon, .icon--xs;
         @extend .icon--chevron-r-brand;
         content: '';
-        margin-left: 4px;
+        margin-left: 6px;
         position: relative;
           bottom: -1px;
       }
       &:hover {
 
         &::after {
-          margin-left: 6px;
+          margin-left: 8px;
         }
       }
     }
