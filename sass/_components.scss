@@ -335,14 +335,13 @@
       @extend %minion;
       background-color: #CC0101;
       color: #FFF;
-      display: inline-block;
-      margin-right: 2px;
-      margin-bottom: 4px;
+      display: none;
       padding: 2px 4px;
       text-transform: uppercase;
 
       @include respond-to(C) {
-        margin-bottom: 0;
+        display: inline-block;
+        margin-right: 2px;
         vertical-align: middle;
       }
     }
@@ -660,7 +659,7 @@
 
     img {
       display: block;
-      margin: 0 auto;
+      margin: 16px auto 0;
       width: 100%; // Always fill the container - upscale if necessary.
     }
   }
