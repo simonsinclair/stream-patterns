@@ -331,28 +331,29 @@
       margin-bottom: 12px;
     }
 
-    .headline__label {
-      @extend %minion;
-      background-color: #CC0101;
-      color: #FFF;
-      display: none;
-      padding: 2px 4px;
-      text-transform: uppercase;
+      .headline__label {
+        @extend %minion;
+        background-color: #CC0101;
+        color: #FFF;
+        display: none;
+        font-weight: normal;
+        padding: 2px 4px;
+        text-transform: uppercase;
 
-      @include respond-to(C) {
-        display: inline-block;
-        margin-right: 2px;
-        vertical-align: middle;
+        @include respond-to(C) {
+          display: inline-block;
+          margin-right: 2px;
+          vertical-align: middle;
+        }
       }
-    }
-    .headline__title {
-      display: block;
+      .headline__title {
+        display: block;
 
-      @include respond-to(C) {
-        display: inline;
-        vertical-align: middle;
+        @include respond-to(C) {
+          display: inline;
+          vertical-align: middle;
+        }
       }
-    }
   }
 
   .body-copy {
