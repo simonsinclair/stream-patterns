@@ -134,19 +134,23 @@ header {
   max-width: 976px;
 }
 .footer {
-  border-top: 1px solid #DDD;
+  background-color: #333;
+  color: #FFF;
   padding-top: $base-line-height;
   padding-bottom: $base-line-height * 4;
-  margin: 0 auto;
-  max-width: 976px;
-  position: relative;
-  text-align: center;
+  -webkit-font-smoothing: antialiased;
 }
-  .footer__top {
-    display: block;
-    position: absolute;
-      top: $base-line-height; right: 0;
+  .footer__inner {
+    margin: 0 auto;
+    max-width: 976px;
+    position: relative;
   }
+    .footer__top {
+      @extend %clearfix;
+      display: block;
+      position: absolute;
+        top: 0; right: 0;
+    }
 
 // Component
 .component {}
