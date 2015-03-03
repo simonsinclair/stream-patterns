@@ -80,7 +80,7 @@
 
     .timestamp time {
       color: #CC0101;
-      margin-top: 4px;
+      margin-top: 2px;
     }
     .body-copy p:last-child {
       margin-bottom: 0;
@@ -128,9 +128,9 @@
       @extend %clearfix;
     }
     .timestamp {
+        float: left;
 
       @include respond-to(C) {
-        float: left;
         width: 16.66667%;
       }
     }
@@ -228,17 +228,16 @@
       // Refresh button group.
       button {
         @extend %pica;
+        line-height: 1;
         background-color: #777;
         color: #FFF;
-        font-weight: bold;
         padding: 6px 8px;
         position: absolute;
           top: 6px; right: 8px;
-        -webkit-font-smoothing: antialiased;
 
         @include respond-to(C) {
           top: 12px; right: 16px;
-          padding: 6px 10px 6px 8px;
+          padding: 7px 10px 7px 8px;
         }
         @include respond-to(D) {
           top: 10px;
@@ -251,8 +250,10 @@
         .icon--refresh {
           height: 22px;
           width: 22px;
-          // transform: rotate(-45deg); // Used for testing
           vertical-align: middle;
+          // Reserved for testing:
+          // animation: spin 750ms linear reverse infinite;
+          @include respond-to(C) {}
         }
       }
     }
@@ -324,36 +325,37 @@
 
   .headline {
 
+    .headline__label {
+      @extend %minion;
+      background-color: #CC0101;
+      color: #FFF;
+      font-weight: normal;
+      float: left;
+      margin-top: 3px;
+      margin-left: 8px;
+      padding: 2px 4px;
+      text-transform: uppercase;
+
+      @include respond-to(C) {
+        margin-top: 5px;
+        margin-right: 8px;
+        margin-left: 0;
+      }
+      @include respond-to(D) {
+        margin-top: 2px;
+      }
+    }
     h2 {
       @extend %double-pica;
+      clear: left;
       font-weight: bold;
       margin-top: 0;
       margin-bottom: 12px;
+
+      @include respond-to(C) {
+        display: inline;
+      }
     }
-
-      .headline__label {
-        @extend %minion;
-        background-color: #CC0101;
-        color: #FFF;
-        display: none;
-        font-weight: normal;
-        padding: 2px 4px;
-        text-transform: uppercase;
-
-        @include respond-to(C) {
-          display: inline-block;
-          margin-right: 2px;
-          vertical-align: middle;
-        }
-      }
-      .headline__title {
-        display: block;
-
-        @include respond-to(C) {
-          display: inline;
-          vertical-align: middle;
-        }
-      }
   }
 
   .body-copy {
