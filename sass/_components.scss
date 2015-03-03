@@ -146,8 +146,8 @@
   .title {
 
     .heading {
-      @extend %great-primer;
-      color: #333;
+      @extend %double-pica;
+      color: #5A5A5A;
       margin-top: 16px;
       margin-bottom: 12px;
 
@@ -165,10 +165,10 @@
         width: 40px;
 
         @include respond-to(C) {
-          margin-bottom: 6px;
+          margin-bottom: 4px;
         }
         @include respond-to(D) {
-          margin-bottom: 4px;
+          margin-bottom: 6px;
         }
       }
   }
