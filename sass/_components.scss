@@ -425,6 +425,9 @@
   }
 
   .contributor {}
+  .contributor__wrap {
+    margin-top: 12px;
+  }
     .contributor__avatar,
     .contributor__body {
       display: table-cell;
