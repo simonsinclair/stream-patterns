@@ -77,7 +77,8 @@ module.exports = function(grunt) {
         colors: {
           brand: '#CC0101',
           copy: '#767676',
-          hover: '#10619E'
+          hover: '#10619E',
+          white: '#FFFFFF'
         }
       },
       dist: {
