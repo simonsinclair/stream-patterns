@@ -662,6 +662,7 @@
   }
 
   .media {
+    position: relative;
 
     img {
       display: block;
@@ -677,5 +678,24 @@
       width: auto;
     }
   }
+    .media__cta {
+      display: flex;
+        align-items: center;
+        justify-content: center;
+      height: 48px;
+      position: absolute;
+        bottom: 0; left: 0;
+      width: 48px;
+
+      .icon {
+        line-height: 48px;
+      }
+    }
+    .media__cta--video {
+      background-color: rgba(0,0,0,0.75);
+    }
+    .media__cta--gallery {
+      background-color: #FFF;
+    }
 
 } // End of .stream component.
