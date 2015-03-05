@@ -155,7 +155,11 @@ header {
         top: 0; right: 0;
 
       @include respond-to(B) {
-        top: 32px; left: -8px;
+        position: static;
+
+        li:first-child {
+          margin-left: 0;
+        }
       }
 
       li {
@@ -163,7 +167,8 @@ header {
 
         &:first-child::before {
           content: '';
-          margin-right: 8px;
+          margin-left: 0;
+          margin-right: 0;
         }
         &::before {
           color: #999;
@@ -172,16 +177,12 @@ header {
         }
       }
       a {
-        color: #FFF;
-        // font-weight: bold;
 
         &:hover {
           color: #CCC;
         }
       }
-      .footer__top {
-
-      }
+      .footer__top {}
     }
 
 // Component
