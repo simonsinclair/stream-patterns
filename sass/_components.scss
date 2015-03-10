@@ -234,6 +234,7 @@
         padding: 6px 8px;
         position: absolute;
           top: 6px; right: 8px;
+        transition: background-color 250ms ease-out;
 
         @include respond-to(C) {
           top: 12px; right: 16px;
@@ -245,15 +246,23 @@
 
         &:hover {
           background-color: #888;
+          transition-duration: 0ms;
         }
 
         .icon--refresh {
           height: 22px;
           width: 22px;
           vertical-align: middle;
-          // Reserved for testing:
-          // animation: spin 750ms linear reverse infinite;
           @include respond-to(C) {}
+        }
+
+        // When refreshing:
+        &.refreshing {
+          background-color: #888;
+
+          .icon--refresh {
+            animation: spin 600ms linear reverse infinite;
+          }
         }
       }
     }
