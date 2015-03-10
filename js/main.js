@@ -81,7 +81,7 @@
       $(elem).addClass('refreshing');
       setTimeout(function() {
         $(elem).removeClass('refreshing');
-      }, 3000);
+      }, 3000); // Multiple of the transition duration (5 spins)
     }
   };
 
