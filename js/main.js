@@ -45,6 +45,9 @@
 
       // Toggle .markup checkboard background and padding.
       $('#js-checker-toggle').on('change', App.toggleChecker);
+
+      // Simulate Refresh on click
+      $('body').on('click', '#js-refresh', App.simulateRefresh);
     },
 
     handleTabClick: function(e) {
@@ -70,6 +73,15 @@
         $('html').addClass('checker');
       }
       App.checker = !App.checker;
+    },
+
+    simulateRefresh: function() {
+      var elem = this;
+
+      $(elem).addClass('refreshing');
+      setTimeout(function() {
+        $(elem).removeClass('refreshing');
+      }, 3000);
     }
   };
 
