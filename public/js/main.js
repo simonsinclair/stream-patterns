@@ -37,6 +37,17 @@
       // Nullify clicks on 'dummy' (#) anchors.
       $('body').on('click', 'a[href=#]', function(e) { e.preventDefault(); });
 
+      // Capture document-level keypresses
+      $(document).on('keyup', function(e) {
+        switch ( e.keyCode ) {
+          case 67: // "C"
+            App.toggleChecker();
+            break;
+          default:
+            console.log( e.keyCode );
+        }
+      });
+
       // (Back to) Top button
       $('#js-footer-top').on('click', function(e) {
         e.preventDefault();
