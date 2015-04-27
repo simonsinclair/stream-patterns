@@ -1,6 +1,8 @@
 // _components.scss
 //
 
+$B-body-space: 16px;
+
 // Set similar defaults as Live for all components.
 // We don't use .markup in the Demo tab, which is why
 // we need to set these defaults for that here too.
@@ -13,6 +15,10 @@
   h2,
   h3 {
     letter-spacing: 0;
+  }
+  p {
+    margin-top: $B-body-space;
+    margin-bottom: $B-body-space;
   }
 }
 
@@ -374,6 +380,30 @@
       color: #767676;
     }
   }
+  .body-copy--cps {}
+    .cps__body {
+      @extend %clearfix;
+    }
+      .cps__thumb {
+        display: block;
+        margin-top: $B-body-space;
+        width: 100%;
+
+        @include respond-to(C) {
+          float: left;
+          margin-bottom: $B-body-space;
+          padding-right: 12px;
+          width: 38%;
+        }
+      }
+      .cps__summary {
+
+        @include respond-to(C) {
+          float: left;
+          margin-top: 10px;
+          width: 62%;
+        }
+      }
 
   .inline-link {
 
