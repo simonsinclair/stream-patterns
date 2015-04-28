@@ -406,22 +406,29 @@ $B-body-space: 16px;
         p {
           margin-top: -4px;
         }
+
+        // "Read the full story" CTA
         a {
           @extend %pica;
+          background-color: #EEE;
+          padding: 8px 10px 8px 8px;
+          transition: background 150ms ease;
 
           &::after {
             @extend .icon, .icon--xs;
             @extend .icon--chevron-r-brand;
             content: '';
-            margin-left: 6px;
+            margin-left: 8px;
             position: relative;
               bottom: -1px;
           }
           &:hover {
+            background-color: #DDD;
 
-            &::after {
-              margin-left: 8px;
-            }
+            &::after {}
+          }
+          &:active {
+            color: #CC0101;
           }
         }
       }
