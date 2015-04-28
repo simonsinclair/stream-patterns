@@ -1,0 +1,164 @@
+<!DOCTYPE HTML>
+<html class="no-js checker" lang="en-GB">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <title>Stream copy tryouts</title>
+    <meta name="description" content="" />
+
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+    <link rel="stylesheet" href="bower_components/normalize.css/normalize.css" />
+    <link rel="stylesheet" href="css/main.css" />
+
+    <style>
+      .page {
+        background-color: #222;
+        padding-right: 8px;
+        padding-left: 8px;
+      }
+      small {
+        color: #AAA;
+        font-size: 11px;
+        text-align: right;
+        text-transform: uppercase;
+      }
+        small::after {
+          content: ' –';
+        }
+
+      .script {
+        background-color: #FFF;
+        border-radius: 3px;
+        padding: 12px;
+        margin: 72px auto 0;
+        max-width: 630px;
+
+        -webkit-box-shadow: 1px 3px 8px 0px rgba(0,0,0,0.75);
+           -moz-box-shadow: 1px 3px 8px 0px rgba(0,0,0,0.75);
+                box-shadow: 1px 3px 8px 0px rgba(0,0,0,0.75);
+      }
+
+      /* FIRST */
+      .script--a p {
+        color: #404040;
+      }
+      .script--a p > a {
+        border-bottom: 1px solid #DCDCDC;
+        color: #000;
+        font-weight: bold;
+      }
+        .script--a p > a:hover {
+          color: #1167A8;
+        }
+
+      /* SECOND */
+        .script--b p {
+          color: #767676;
+        }
+        .script--b p > a {
+          border-bottom: none;
+          color: #000;
+          font-weight: normal;
+        }
+          .script--b p > a:hover {
+            color: #1167A8;
+          }
+
+      .script--c p {
+        color: #666;
+      }
+      .script--c p > a {
+        color: #555;
+        border-bottom: 1px solid #AAA;
+      }
+        .script--c p > a:hover {
+          border-bottom-color: #1167A8;
+          color: #1167A8;
+        }
+
+      .script--d {}
+        .script--d p {}
+        .script--d p > a {}
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="header-inner">
+        <h1>Stream copy tryouts</h1>
+        <p class="display-group" title="Your current browser width group">
+          Group:
+          <span class="display-group__a">A</span>
+          <span class="display-group__b">B</span>
+          <span class="display-group__c">C</span>
+          <span class="display-group__d">D</span>
+        </p>
+      </div>
+    </header>
+
+    <div class="page" id="page">
+
+      <div class="script script--a">
+        <small>Live</small>
+
+        <p>Nick Clegg said <a href="#">no party would win an outright election victory</a> and warned voters they face a choice between the Lib Debs, the SNP and UKIP over who holds the balance of power. <a href="#" class="external">Launching his manifesto</a>, the Lib Dem leader said he would seek to form a "coalition with conscience" that would not "lurch off to the extremes".</p>
+
+        <p>UKIP - which also launched its <a href="#" class="external">election manifesto</a> today - said it would make working people better off through a "low-tax revolution".</p>
+
+        <p>Working grandparents <a href="#">could share unpaid parental leave</a> under plans beind launched by the Labour Party as part of its <a href="#" class="external">women's manifesto</a>.</p>
+
+        <p>And finally, the SDLP has <a href="#">launched its manifesto</a>, in which it calls for a prosperity process for Northern Ireland to expand its private sector.</p>
+      </div>
+
+      <div class="script script--b">
+        <small>Stream MVP</small>
+
+        <p>Nick Clegg said <a href="#">no party would win an outright election victory</a> and warned voters they face a choice between the Lib Debs, the SNP and UKIP over who holds the balance of power. <a href="#" class="external">Launching his manifesto</a>, the Lib Dem leader said he would seek to form a "coalition with conscience" that would not "lurch off to the extremes".</p>
+
+        <p>UKIP - which also launched its <a href="#" class="external">election manifesto</a> today - said it would make working people better off through a "low-tax revolution".</p>
+
+        <p>Working grandparents <a href="#">could share unpaid parental leave</a> under plans beind launched by the Labour Party as part of its <a href="#" class="external">women's manifesto</a>.</p>
+
+        <p>And finally, the SDLP has <a href="#">launched its manifesto</a>, in which it calls for a prosperity process for Northern Ireland to expand its private sector.</p>
+      </div>
+
+      <div class="script script--c">
+        <small>Stream MVP Improved A</small>
+
+        <p>Nick Clegg said <a href="#">no party would win an outright election victory</a> and warned voters they face a choice between the Lib Debs, the SNP and UKIP over who holds the balance of power. <a href="#" class="external">Launching his manifesto</a>, the Lib Dem leader said he would seek to form a "coalition with conscience" that would not "lurch off to the extremes".</p>
+
+        <p>UKIP - which also launched its <a href="#" class="external">election manifesto</a> today - said it would make working people better off through a "low-tax revolution".</p>
+
+        <p>Working grandparents <a href="#">could share unpaid parental leave</a> under plans beind launched by the Labour Party as part of its <a href="#" class="external">women's manifesto</a>.</p>
+
+        <p>And finally, the SDLP has <a href="#">launched its manifesto</a>, in which it calls for a prosperity process for Northern Ireland to expand its private sector.</p>
+      </div>
+
+      <div class="script script--d">
+        <small>Stream MVP Improved B</small>
+
+        <p>Nick Clegg said <a href="#">no party would win an outright election victory</a> and warned voters they face a choice between the Lib Debs, the SNP and UKIP over who holds the balance of power. <a href="#" class="external">Launching his manifesto</a>, the Lib Dem leader said he would seek to form a "coalition with conscience" that would not "lurch off to the extremes".</p>
+
+        <p>UKIP - which also launched its <a href="#" class="external">election manifesto</a> today - said it would make working people better off through a "low-tax revolution".</p>
+
+        <p>Working grandparents <a href="#">could share unpaid parental leave</a> under plans beind launched by the Labour Party as part of its <a href="#" class="external">women's manifesto</a>.</p>
+
+        <p>And finally, the SDLP has <a href="#">launched its manifesto</a>, in which it calls for a prosperity process for Northern Ireland to expand its private sector.</p>
+      </div>
+
+    </div><!-- /.page -->
+
+    <div class="footer">
+      <div class="footer__inner">
+        <p><small>Copyright &copy; 2015 BBC UX&amp;D</small></p>
+
+        <ul class="footer__links">
+          <li><a href="https://github.com/simonsinclair/stream-patterns">GitHub</a></li>
+          <li><a href="#page" class="footer__top" id="js-footer-top">Top &uarr;</a></li>
+        </ul>
+      </div>
+    </div>
+
+  </body>
+</html>
