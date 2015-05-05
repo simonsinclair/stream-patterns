@@ -472,7 +472,7 @@ $B-body-space: 16px;
       color: #767676;
 
       > a {
-        color: #000;
+        border-bottom: 1px solid;
 
         &:hover {
           color: #10619E;
@@ -488,7 +488,7 @@ $B-body-space: 16px;
 
         &::after {
           @extend .icon, .icon--xs;
-          @extend .icon--external;
+          @extend .icon--external-copy;
           content: '';
           margin-right: 2px;
           margin-left: 4px;
