@@ -439,22 +439,26 @@ $B-body-space: 16px;
 
       p {
         margin-top: $B-body-space;
-        margin-bottom: $B-body-space;
+        margin-bottom: $B-body-space - 4; // Bring the 'Read the full story' button closer
       }
       a {
         @extend %brevier;
         background-color: #FDFDFD;
 
-        border-top: 1px solid #EEE;
-        border-right: 1px solid #CCC;
-        border-bottom: 1px solid #CCC;
-        border-left: 1px solid #EEE;
+        border-top: 1px solid #DDD;
+        border-right: 1px solid #DDD;
+        border-bottom: 1px solid #DDD;
+        border-left: 1px solid #DDD;
 
         display: inline-block;
         padding: 6px 10px 6px 10px;
 
         &:hover {
-          background-color: #FFF;
+          color: #1167A8;
+
+          &::after {
+            @extend .icon--chevron-r-hover;
+          }
         }
         &::after {
           @extend .icon, .icon--xxs;
