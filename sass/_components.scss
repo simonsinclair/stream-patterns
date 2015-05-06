@@ -1,6 +1,7 @@
 // _components.scss
 //
 
+$body-copy-col: #6E6E6E;
 $B-body-space: 16px;
 
 // Set similar defaults as Live for all components.
@@ -377,7 +378,7 @@ $B-body-space: 16px;
 
     p {
       @extend %pica;
-      color: #767676;
+      color: $body-copy-col;
     }
   }
 
@@ -473,13 +474,14 @@ $B-body-space: 16px;
 
     p {
       @extend %pica;
-      color: #767676;
+      color: $body-copy-col;
 
       > a {
-        border-bottom: 1px solid;
+        border-bottom: 1px solid #909090;
 
         &:hover {
           color: #10619E;
+          border-bottom-color: #10619E;
         }
       }
     }
@@ -513,7 +515,7 @@ $B-body-space: 16px;
     p,
     ul {
       @extend %pica;
-      color: #767676;
+      color: $body-copy-col;
     }
     ul {
       padding-left: 1em;
@@ -562,7 +564,7 @@ $B-body-space: 16px;
         }
       }
       strong {
-        color: #767676;
+        color: $body-copy-col;
         font-weight: normal;
       }
     }
@@ -573,7 +575,7 @@ $B-body-space: 16px;
 
     blockquote {
       @extend %paragon;
-      color: #767676;
+      color: $body-copy-col;
       font-family: Georgia, serif;
       font-style: italic;
       position: relative;
@@ -588,7 +590,7 @@ $B-body-space: 16px;
 
       cite {
         @extend %pica;
-        color: #767676;
+        color: $body-copy-col;
         font-family: Arial, sans-serif;
         font-style: normal;
       }
@@ -599,7 +601,7 @@ $B-body-space: 16px;
 
     blockquote {
       @extend %pica;
-      color: #767676;
+      color: $body-copy-col;
       position: relative;
 
       &::before {
@@ -652,7 +654,7 @@ $B-body-space: 16px;
           }
         }
         strong {
-          color: #767676;
+          color: $body-copy-col;
           font-weight: normal;
         }
       }
@@ -660,7 +662,7 @@ $B-body-space: 16px;
 
         p {
           @extend %pica;
-          color: #767676;
+          color: $body-copy-col;
           font-family: Georgia, serif;
 
           > a {
@@ -700,7 +702,7 @@ $B-body-space: 16px;
 
       p {
         @extend %pica;
-        color: #767676;
+        color: $body-copy-col;
 
         > a {
           color: #000;
@@ -725,7 +727,7 @@ $B-body-space: 16px;
 
     blockquote {
       @extend %pica;
-      color: #767676;
+      color: $body-copy-col;
       position: relative;
 
       &::before {
