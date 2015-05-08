@@ -33,21 +33,7 @@
       p {
         font-size: 16px;
         line-height: 22px;
-
       }
-        @media (min-width: 599px) {
-          p {
-            font-size: 18px;
-            line-height: 24px;
-          }
-        }
-
-        @media (min-width: 1008px) {
-          p {
-            font-size: 16px;
-            line-height: 22px;
-          }
-        }
 
       .script {
         background-color: #FFF;
@@ -95,12 +81,32 @@
         background-image: linear-gradient(to bottom, rgba(0,0,0,0) 50%, rgba(0,0,0,0.6) 50%);
         background-repeat: repeat-x;
         background-size: 2px 2px;
-        background-position: 0 18px;
+        background-position: 0 15px;
       }
         .script--c p > a:hover {
           background-image: linear-gradient(to bottom, rgba(17,103,168,0) 50%, rgba(17,103,168,0.6) 50%);
           color: #1167A8;
         }
+
+      @media (min-width: 599px) {
+        p {
+          font-size: 18px;
+          line-height: 24px;
+        }
+        .script--c p > a {
+          background-position: 0 18px;
+        }
+      }
+
+      @media (min-width: 1008px) {
+        p {
+          font-size: 16px;
+          line-height: 22px;
+        }
+        .script--c p > a {
+          background-position: 0 15px;
+        }
+      }
     </style>
   </head>
   <body>
