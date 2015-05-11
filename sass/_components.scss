@@ -1,7 +1,7 @@
 // _components.scss
 //
 
-$body-copy-col: #6E6E6E;
+$body-copy-col: #404040;
 $B-body-space: 16px;
 
 // Set similar defaults as Live for all components.
@@ -379,6 +379,7 @@ $B-body-space: 16px;
     p {
       @extend %pica;
       color: $body-copy-col;
+      -webkit-font-smoothing: antialiased;
     }
   }
 
@@ -475,8 +476,13 @@ $B-body-space: 16px;
     p {
       @extend %pica;
       color: $body-copy-col;
+      -webkit-font-smoothing: antialiased;
 
       > a {
+        // background-image: linear-gradient(to bottom, rgba(0,0,0,0) 50%, rgba(0,0,0,0.6) 50%);
+        // background-repeat: repeat-x;
+        // background-size: 2px 2px;
+        // background-position: 0 15px;
         border-bottom: 1px solid #909090;
 
         &:hover {
@@ -516,6 +522,7 @@ $B-body-space: 16px;
     ul {
       @extend %pica;
       color: $body-copy-col;
+      -webkit-font-smoothing: antialiased;
     }
     ul {
       padding-left: 1em;
@@ -593,6 +600,7 @@ $B-body-space: 16px;
         color: $body-copy-col;
         font-family: Arial, sans-serif;
         font-style: normal;
+        -webkit-font-smoothing: antialiased;
       }
     }
   }
@@ -603,6 +611,7 @@ $B-body-space: 16px;
       @extend %pica;
       color: $body-copy-col;
       position: relative;
+      -webkit-font-smoothing: antialiased;
 
       &::before {
         @extend .icon, .icon--m;
@@ -703,6 +712,7 @@ $B-body-space: 16px;
       p {
         @extend %pica;
         color: $body-copy-col;
+        -webkit-font-smoothing: antialiased;
 
         > a {
           color: #000;
@@ -729,6 +739,7 @@ $B-body-space: 16px;
       @extend %pica;
       color: $body-copy-col;
       position: relative;
+      -webkit-font-smoothing: antialiased;
 
       &::before {
         @extend .icon, .icon--m;
