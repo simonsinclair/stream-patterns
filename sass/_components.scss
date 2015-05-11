@@ -479,15 +479,21 @@ $B-body-space: 16px;
       -webkit-font-smoothing: antialiased;
 
       > a {
-        // background-image: linear-gradient(to bottom, rgba(0,0,0,0) 50%, rgba(0,0,0,0.6) 50%);
-        // background-repeat: repeat-x;
-        // background-size: 2px 2px;
-        // background-position: 0 15px;
-        border-bottom: 1px solid #909090;
+        background-image: linear-gradient(to bottom, rgba(0,0,0,0) 50%, rgba(0,0,0,0.6) 50%);
+        background-repeat: repeat-x;
+        background-size: 2px 2px;
+        background-position: 0 15px;
+
+        @include respond-to(C) {
+          background-position: 0 17px;
+        }
+        @include respond-to(D) {
+          background-position: 0 15px;
+        }
 
         &:hover {
-          color: #10619E;
-          border-bottom-color: #10619E;
+          background-image: linear-gradient(to bottom, rgba(17,103,168,0) 50%, rgba(17,103,168,0.6) 50%);
+          color: #1167A8;
         }
       }
     }
