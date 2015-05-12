@@ -587,7 +587,7 @@ $B-body-space: 16px;
   .quote {
 
     blockquote {
-      @extend %paragon;
+      @extend %blockquote;
       color: $body-copy-col;
       font-family: Georgia, serif;
       font-style: italic;

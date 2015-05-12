@@ -509,3 +509,24 @@ sub {
     //     @include font-settings(14px, 16px);
     // }
 }
+
+%blockquote {
+    // @include respond-to(A) {
+    //     @include font-settings(18px, 20px);
+    // }
+
+    @include respond-to(B) {
+      font-size: 18px;
+      line-height: 24px;
+    }
+
+    @include respond-to(C) {
+      font-size: 18px;
+      line-height: 24px;
+    }
+
+    @include respond-to(D) {
+      font-size: 18px;
+      line-height: 24px;
+    }
+}
