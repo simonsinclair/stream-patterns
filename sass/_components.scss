@@ -485,7 +485,7 @@ $B-body-space: 16px;
         background-position: 0 15px;
 
         @include respond-to(C) {
-          background-position: 0 17px;
+          background-position: 0 18px;
         }
         @include respond-to(D) {
           background-position: 0 15px;
