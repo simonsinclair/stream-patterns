@@ -543,6 +543,16 @@ $B-body-space: 16px;
   }
 
   .contributor {}
+  .contributor--person {
+
+    .contributor__avatar {
+
+      > img {
+        background-color: #EEE;
+        border-radius: 50%;
+      }
+    }
+  }
   .contributor__wrap {
     margin-top: 12px;
     margin-bottom: 12px; // Ensure margin collapsing - https://developer.mozilla.org/en-US/docs/Web/CSS/margin_collapsing
@@ -557,8 +567,8 @@ $B-body-space: 16px;
       padding-right: 8px;
 
       > img {
-        background-color: #EEE;
-        border-radius: 50%;
+
+
         display: block;
         max-width: none;
       }
