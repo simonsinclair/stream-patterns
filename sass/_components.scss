@@ -410,19 +410,17 @@ $B-body-space: 16px;
       clear: none;
     }
   }
-    .cps__headline {
-      @extend %double-pica;
-      font-weight: bold;
-      margin-top: 0;
-      margin-bottom: 0;
-    }
     .cps__thumb {
       display: block;
-      float: left;
       margin-top: 2px;
       margin-bottom: $B-body-space;
-      padding-right: 12px;
-      width: 34%;
+      width: 100%;
+
+      @media (min-width: 480px) {
+        float: left;
+        padding-right: 12px;
+        width: 34%;
+      }
 
       @include respond-to(D) {
         padding-right: 16px;
