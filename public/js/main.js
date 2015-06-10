@@ -35,7 +35,7 @@
       $('#js-component-tabs').on('click', 'a', App.handleTabClick);
 
       // Nullify clicks on 'dummy' (#) anchors.
-      $('body').on('click', 'a[href=#]', function(e) { e.preventDefault(); });
+      $('.markup').on('click', 'a[href=#]', function(e) { e.preventDefault(); });
 
       // Capture document-level keypresses
       $(document).on('keyup', function(e) {
@@ -59,6 +59,9 @@
 
       // Simulate Refresh on click
       $('body').on('click', '#js-refresh', App.simulateRefresh);
+
+      // Toggle-able titles
+      $('body').on('click', 'a.hgroup__info-toggle', App.toggleTitleInfo);
     },
 
     handleTabClick: function(e) {
@@ -93,6 +96,13 @@
       setTimeout(function() {
         $(elem).removeClass('refreshing');
       }, 3000); // Multiple of the transition duration (5 spins)
+    },
+
+    toggleTitleInfo: function(e) {
+      e.preventDefault();
+
+      var $hgroup = $(this).parent();
+      $hgroup.toggleClass('hgroup--expanded');
     }
   };
 
