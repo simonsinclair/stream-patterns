@@ -61,7 +61,7 @@
       $('body').on('click', '#js-refresh', App.simulateRefresh);
 
       // Toggle-able titles
-      $('body').on('click', 'a.hgroup__info-toggle', App.toggleTitleInfo);
+      $('body').on('click', 'a.hgroup', App.toggleTitleInfo);
     },
 
     handleTabClick: function(e) {
@@ -100,9 +100,7 @@
 
     toggleTitleInfo: function(e) {
       e.preventDefault();
-
-      var $hgroup = $(this).parent();
-      $hgroup.toggleClass('hgroup--expanded');
+      $(this).toggleClass('hgroup--expanded');
     }
   };
 
