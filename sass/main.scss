@@ -54,46 +54,26 @@ h4 {
   margin-top: $h4-margin-top * 1.5;
   margin-bottom: $h4-margin-bottom / 2;
 }
-.hgroup {
-  background-color: #F0F0F0;
-  border-bottom: 1px solid #EEE;
-  margin-top: $h4-margin-bottom * 2;
-  margin-bottom: $h4-margin-bottom;
-  height: 44px;
-  overflow: hidden;
-  position: relative;
-  transition: height 150ms ease;
 
-  h3 {
-    margin-top: 0;
-    margin-bottom: 0;
+.hgroup {
+  background-color: #EEE;
+  display: block;
+  height: 44px;
+  margin-top: $base-line-height * 2;
+  overflow: hidden;
+  transition: height 250ms linear;
+
+  &:hover {
+    background-color: #FAFAFA;
   }
+
+  h3,
   h4 {
     margin-top: 0;
     margin-bottom: 0;
   }
 }
-  .hgroup__info-toggle {
-    font-weight: bold;
-    position: absolute;
-      top: 8px; right: 4px;
-    z-index: 10;
-
-    img {
-      margin-left: 6px;
-      transform: rotate(-45deg);
-      transition: transform 150ms linear;
-    }
-  }
-  .hgroup--expanded {
-    height: 66px;
-    transition: height 150ms linear;
-
-    .hgroup__info-toggle img {
-      transform: rotate(0);
-      transition: transform 150ms linear;
-    }
-  }
+.hgroup--expanded {}
 
 a {
   color: inherit;
