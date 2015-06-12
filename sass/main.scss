@@ -58,10 +58,11 @@ h4 {
 .hgroup {
   background-color: #EEE;
   display: block;
-  height: 44px;
+  max-height: 44px;
   margin-top: $base-line-height * 2;
+  padding-bottom: $base-line-height / 4;
   overflow: hidden;
-  transition: height 250ms linear;
+  position: relative;
 
   &:hover {
     background-color: #FAFAFA;
@@ -72,8 +73,21 @@ h4 {
     margin-top: 0;
     margin-bottom: 0;
   }
+
+  .hgroup__affordance {
+    position: absolute;
+      top: 14px; right: 8px;
+    transform: rotate(-45deg);
+    z-index: 10;
+  }
 }
-.hgroup--expanded {}
+.hgroup--expanded {
+  max-height: 200px;
+
+  .hgroup__affordance {
+    transform: rotate(0);
+  }
+}
 
 a {
   color: inherit;
