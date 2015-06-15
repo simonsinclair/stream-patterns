@@ -256,7 +256,7 @@ $B-body-space: 16px;
           transition-duration: 0ms;
         }
 
-        .icon--refresh {
+        .icon--refresh--reverse-white {
           height: 22px;
           width: 22px;
           vertical-align: middle;
@@ -267,8 +267,8 @@ $B-body-space: 16px;
         &.refreshing {
           background-color: #888;
 
-          .icon--refresh {
-            animation: spin 600ms linear reverse infinite;
+          .icon--refresh--reverse-white {
+            animation: spin 600ms linear infinite;
           }
         }
       }
