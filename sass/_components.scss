@@ -772,6 +772,7 @@ $B-body-space: 16px;
   .media {
     position: relative;
 
+    > img,
     .markup img {
       display: block;
       margin: 16px auto 0;
@@ -780,6 +781,7 @@ $B-body-space: 16px;
   }
   .media--portrait {
 
+    > img,
     .markup img {
       max-height: 358px; // Prevent portrait images being taller than their 16:9 counterparts
       max-width: 100%;
