@@ -168,14 +168,14 @@ $B-body-space: 16px;
       .heading__stitch {
         background-color: #CC0101;
         height: 1px;
-        margin-bottom: 4px;
+        margin-top: 4px;
         width: 40px;
 
         @include respond-to(C) {
-          margin-bottom: 4px;
+          margin-top: 4px;
         }
         @include respond-to(D) {
-          margin-bottom: 6px;
+          margin-top: 6px;
         }
       }
   }
