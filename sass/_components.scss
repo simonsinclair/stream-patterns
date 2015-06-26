@@ -811,3 +811,48 @@ $B-body-space: 16px;
     }
 
 } // End of .stream component.
+
+// SURVEY PROMO
+// Section
+//////////////|
+
+.survey-promo {
+
+  .prime-promo {}
+
+  .in-page {
+    background-color: #333;
+    padding: 16px 8px;
+    position: relative;
+  }
+    .in-page__hook {
+      color: #FFF;
+      font-size: 15px;
+      line-height: 1.2;
+      margin-top: 0;
+      margin-right: 120px;
+      margin-bottom: 0;
+      -webkit-font-smoothing: antialiased;
+    }
+    .in-page__cta {
+      border-bottom: 2px solid #111;
+      background-color: #FAFAFA;
+      display: inline-block;
+      font-size: 15px;
+      font-weight: bold;
+      line-height: 1.2;
+      padding: 6px 8px;
+      position: absolute;
+        top: 50%; right: 8px;
+      transform: translateY(-50%);
+      text-align: center;
+
+      &:hover {
+        background-color: #FFF;
+      }
+    }
+      .cta__quick-survey {
+        display: block;
+      }
+
+} // End of .survey-promo component.
