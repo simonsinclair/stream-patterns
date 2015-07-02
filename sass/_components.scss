@@ -821,38 +821,56 @@ $B-body-space: 16px;
   .prime-promo {}
 
   .in-page {
-    background-color: #333;
-    padding: 16px 8px;
-    position: relative;
+    @extend %clearfix;
+    background-color: #2A2D33;
+    color: #FFF;
+    padding: 21px 8px 20px;
+    text-align: center;
+    -webkit-font-smoothing: antialiased;
+
+    @include respond-to(C) {
+      padding: 20px 16px;
+    }
   }
     .in-page__hook {
-      color: #FFF;
-      font-size: 15px;
-      line-height: 1.2;
+      font-size: 16px;
+      line-height: 1;
       margin-top: 0;
-      margin-right: 120px;
-      margin-bottom: 0;
-      -webkit-font-smoothing: antialiased;
+      margin-bottom: 12px;
+
+      @include respond-to(C) {
+        font-size: 18px;
+        float: left;
+        margin-top: 9px;
+        margin-bottom: 0;
+      }
     }
     .in-page__cta {
-      border-bottom: 2px solid #111;
-      background-color: #FAFAFA;
+      border: 2px solid #30C5FF;
+      color: #30C5FF;
       display: inline-block;
       font-size: 15px;
       font-weight: bold;
-      line-height: 1.2;
-      padding: 6px 8px;
-      position: absolute;
-        top: 50%; right: 8px;
-      transform: translateY(-50%);
-      text-align: center;
+      line-height: 1;
+      padding: 8px 12px 9px;
 
       &:hover {
-        background-color: #FFF;
+        border-color: #FFF;
+        color: #FFF;
+      }
+      &:active {
+        padding: 9px 12px 8px;
+      }
+
+      @include respond-to(C) {
+        float: right;
+        font-size: 16px;
+        padding: 9px 12px 8px;
+
+        &:active {
+          padding: 10px 12px 7px;
+        }
       }
     }
-      .cta__quick-survey {
-        display: block;
-      }
 
 } // End of .survey-promo component.
