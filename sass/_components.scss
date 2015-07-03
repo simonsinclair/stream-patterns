@@ -822,11 +822,10 @@ $B-body-space: 16px;
 
   .in-page {
     @extend %clearfix;
-    background-color: #2A2D33;
-    color: #FFF;
+    background-color: #EEE;
+    color: #404040;
     padding: 21px 8px 20px;
     text-align: center;
-    -webkit-font-smoothing: antialiased;
 
     @include respond-to(C) {
       padding: 20px 16px;
@@ -846,8 +845,9 @@ $B-body-space: 16px;
       }
     }
     .in-page__cta {
-      border: 2px solid #30C5FF;
-      color: #30C5FF;
+      background-color: #FFF;
+      border: 1px solid #404040;
+      color: #404040;
       display: inline-block;
       font-size: 15px;
       font-weight: bold;
@@ -855,8 +855,8 @@ $B-body-space: 16px;
       padding: 8px 12px 9px;
 
       &:hover {
-        border-color: #FFF;
-        color: #FFF;
+        border-color: #1167a8;
+        color: #1167a8;
       }
       &:active {
         padding: 9px 12px 8px;
