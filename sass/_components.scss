@@ -822,7 +822,7 @@ $B-body-space: 16px;
 
   .in-page {
     @extend %clearfix;
-    background-color: #2A2D33;
+    background-color: #1F1F1F;
     color: #FFF;
     padding: 21px 8px 19px;
     text-align: center;
@@ -847,7 +847,7 @@ $B-body-space: 16px;
     }
     .in-page__cta {
       background-color: #FFF;
-      color: #2A2D33;
+      color: #1F1F1F;
       display: inline-block;
       font-size: 15px;
       font-weight: bold;
