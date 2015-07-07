@@ -481,10 +481,8 @@ sub {
   //     @include font-settings(18px, 20px);
   // }
 
-  @include respond-to(B) {
-    font-size: 18px;
-    line-height: 24px;
-  }
+  font-size: 18px;
+  line-height: 24px;
 
   @include respond-to(C) {
     font-size: 18px;
