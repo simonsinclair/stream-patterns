@@ -196,18 +196,23 @@ $B-body-space: 16px;
 
     .header-wrap {
       background: #EEE;
-      overflow: hidden;
-      padding: 10px 8px 12px;
+      overflow: hidden; // Safety net
+      padding-right: 8px;
+      padding-left: 8px;
       position: relative;
 
       @include respond-to(C) {
-        padding: 14px 16px 16px;
+        padding-right: 16px;
+        padding-left: 16px;
       }
 
       // Heading group.
+
       h2 {
         @extend %great-primer;
         font-weight: normal;
+        height: 52px;
+        // line-height: 52px;
         margin-top: 0;
         margin-bottom: 0;
         overflow: hidden;
@@ -224,65 +229,69 @@ $B-body-space: 16px;
           margin-right: 2px;
           padding: 2px 4px;
           text-transform: uppercase;
-          vertical-align: middle;
         }
 
         // Current locale.
+        .location {}
+
+        .label,
         .location {
+          line-height: 52px;
           vertical-align: middle;
         }
 
       // Refresh button group.
       button {
         @extend %pica;
-        line-height: 1;
         background-color: #777;
         color: #FFF;
-        padding: 6px 8px;
+        height: 36px;
+        // line-height: 36px;
+        margin-top: -18px;
+        padding-right: 8px;
+        padding-left: 8px;
         position: absolute;
-          top: 6px; right: 8px;
+          top: 50%; right: 8px;
+
         transition: background-color 250ms ease-out;
 
         @include respond-to(C) {
-          top: 12px; right: 16px;
-          padding: 7px 10px 7px 8px;
+          right: 16px;
         }
-        @include respond-to(D) {
-          top: 10px;
-        }
+        @include respond-to(D) {}
 
         &:hover {
           background-color: #888;
           transition-duration: 0ms;
         }
 
-        .icon--refresh--reverse-white {
-          height: 22px;
-          width: 22px;
-          vertical-align: middle;
-          @include respond-to(C) {}
-        }
-
         // When refreshing:
         &.refreshing {
           background-color: #888;
 
-          .icon--refresh--reverse-white {
+          .header__refresh-icon {
             animation: spin 600ms linear infinite;
           }
         }
       }
     }
+
+    .header__refresh-icon,
+    .header__refresh-text {
+      line-height: 36px;
+      vertical-align: middle;
+    }
+
+    .header__refresh-icon {}
     .header__refresh-text {
       display: none;
       margin-right: 2px;
-      vertical-align: middle;
 
       @include respond-to(C) {
         display: inline;
       }
     }
-  }
+  } // /.header
 
   .timestamp {
 
