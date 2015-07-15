@@ -839,6 +839,9 @@ $B-body-space: 16px;
 .survey-promo {
 
   .prime-promo {}
+    .prime {}
+    .prime__hook {}
+    .prime__cta {}
 
   .in-page {
     @extend %clearfix;
