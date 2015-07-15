@@ -779,20 +779,33 @@ $B-body-space: 16px;
   .media {
     position: relative;
 
-    > img,
-    .markup img {
-      display: block;
+    figure {
       margin: 16px auto 0;
-      width: 100%; // Always fill the container - upscale if necessary.
+
+      img {
+        display: block;
+        width: 100%; // Always fill the container - upscale if necessary.
+      }
+      figcaption {
+        @extend %brevier;
+        color: #FFF;
+        background-color: #111;
+        padding: 16px;
+        -webkit-font-smoothing: antialiased;
+      }
     }
   }
   .media--portrait {
 
-    > img,
-    .markup img {
-      max-height: 358px; // Prevent portrait images being taller than their 16:9 counterparts
-      max-width: 100%;
-      width: auto;
+    figure {
+      margin: 16px 16.666% 0;
+
+      figcaption {
+
+        @media (max-width: 480px) {
+          padding: 8px;
+        }
+      }
     }
   }
     .media__cta {
