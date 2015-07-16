@@ -838,10 +838,49 @@ $B-body-space: 16px;
 
 .survey-promo {
 
-  .prime-promo {}
-    .prime {}
-    .prime__hook {}
-    .prime__cta {}
+  .prime-promo {
+    font-weight: bold;
+  }
+    .prime {
+      border-bottom: 1px solid #E5E5E5;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      padding-top: 8px;
+      padding-bottom: 8px;
+
+      @include respond-to(C) {
+        text-align: right;
+      }
+    }
+    .prime__hook {
+      display: inline-block;
+      font-size: 16px;
+      margin-top: 0;
+      margin-right: 8px;
+      margin-bottom: 0;
+
+      @include respond-to(C) {
+        font-size: 20px;
+      }
+    }
+    .prime__cta {
+      background-color: #499243;
+      border-bottom: 2px solid #315E2C;
+      color: #FFF;
+      display: inline-block;
+      font-size: 15px;
+      padding: 6px 8px;
+      text-align: center;
+      -webkit-font-smoothing: antialiased;
+
+      @include respond-to(C) {
+        font-size: 16px;
+      }
+
+      &:hover {
+        background-color: #4F9E48;
+      }
+    }
 
   .in-page {
     @extend %clearfix;
