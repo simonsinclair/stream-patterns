@@ -845,7 +845,6 @@ $B-body-space: 16px;
       border-bottom: 1px solid #E5E5E5;
       margin-top: 20px;
       margin-bottom: 20px;
-      padding-top: 8px;
       padding-bottom: 8px;
 
       @include respond-to(C) {
@@ -869,6 +868,7 @@ $B-body-space: 16px;
       color: #FFF;
       display: inline-block;
       font-size: 15px;
+      margin-top: 8px;
       padding: 6px 8px;
       text-align: center;
       -webkit-font-smoothing: antialiased;
